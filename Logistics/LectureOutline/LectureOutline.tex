@@ -1,0 +1,328 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inzane Syllabus Template
+% LaTeX Template
+% Version 1.2 (8.22.2019)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Zane Wolf (zwolf.mlxvi@gmail.com)
+%
+% I (Zane) have left a lot of instructions both in the .tex file and the .cls file that can guide you to customize this document to suite your tastes and requirements. Here is a brief guide: 
+%  - Changing the Main Color: .cls line 39
+%  - Adding more FAQs: .cls line 126 and .tex line 99
+%  - Adding TA emails: uncomment .cls lines 220 & 224 and .tex lines 85 and 89
+%  - Deleting the FAQ sidebar entirely: .tex line 188
+%  - Removing the Lab/TA Info and placing a brief Overview/About section in their place:        uncomment .tex line 91 and .cls line 227, and comment .cls lines for the LAB/TA info        that you no longer want (c. lines 184-227)
+
+%
+% I am also happy to help with crafting/designing modifications to this template to help suite your personal needs in a syllabus. Feel free to reach out! 
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{inzane_syllabus} % a4paper for A4
+
+\usepackage{booktabs, colortbl, xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ltablex} 
+\usepackage{multirow}
+\setlist{nolistsep}
+
+%Use hours/mins of today for version. 
+\usepackage[hhmmss]{datetime}
+
+\usepackage{lscape}
+\newcolumntype{r}{>{\hsize=0.9\hsize}X}
+\newcolumntype{w}{>{\hsize=0.6\hsize}X}
+\newcolumntype{m}{>{\hsize=.9\hsize}X}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{2.0}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\profilepic{TAE_1593_cropped3} % Profile picture, if the height of the picture is less than that of the circle, it will have a flat bottom. 
+
+
+% To remove any of the following, you need to comment/delete the lines in the .cls file (c. line 186). Commenting/deleting the lines below will produce an error. 
+
+%To add different lines, you will need to create the new command, e.g. \profPhone, in the .cls file c. line 76, and command to create the line in the side bar in the .cls file c. line 186
+
+\classname{Introduction to Geophysics} 
+\classnum{Geow-B402-V2} 
+
+%%%%%%%%%%%%%%% PROF INFO
+\profname{Reinhard Drews}
+\officehours{Office Hrs: on demand.} 
+\office{GUZ 3M07/3U03/3F03}
+\site{\MYhref{https://uni-tuebingen.de/de/147603}{Website}} 
+\email{reinhard.drews@uni-tuebingen.de}
+
+%%%%%%%%%%%%%%% COURSE  INFO
+\prereq{Prereq: None}
+\classdays{Tues \& Thurs}
+\classhours{16:15-18.00}
+\classloc{Online}
+
+%%%%%%%%%%%%%%% LAB INFO
+\labdays{In sub-groups of 6}
+\labhours{Three exercises with individual timing for groups. It will be approximately six hours of field work per exercise.}
+\labloc{Outside.}
+
+%%%%%%%%%%%%%%% TA INFO
+\taAname{Prof. P. Dietrich}
+\taAofficehours{Office Hrs: On demand}
+\taAoffice{UFZ, Leipzig}
+%\taAemail{peter.dietrich@ufz.de}
+\taBname{R. Ershadi}
+\taBofficehours{Office Hrs: On demand.}
+\taBoffice{GUZ Level 3}
+%\taBemail{mohammadreza.ershadi@uni-tuebingen.de}
+
+% \about{Fish make up the largest group of vertebrates on the planet, easily outnumbering mammals, marsupials, birds, and reptiles combined. Not only are they abundant, but they've diversified into an extraordinary array of sizes, shapes, lifestyles, and habitats. You can find them in the coldest, deepest parts of the ocean, and in the hottest freshwater ponds in the desert. This course will explore fish diversity and their biology. } 
+
+
+%---------------------------------------------------------------------------------------
+%	 FAQs
+%----------------------------------------------------------------------------------------
+%to add more questions or remove this section, go to the .cls file and start with lines comment
+%lines 226-250. Also comment out this section as well as line 152(ish), the command \makeSide
+
+\qOne{Is this course hard?}
+\aOne{Not sure, Rumor has it that the workload is comparatively high. All of you took quite difficult math classes and we will use these, e.g., including differentiation, integration, some linear algebra (e.g. vector fields). We will also brush on computational techniques. Exam relevant content will stick to a BSc level, but hopefully you will also be prepared for higher MSc courses. }
+
+\qTwo{How to pass the exam?}
+\aTwo{Maybe don't google every question during the term. Other than that may the force be with you.}
+
+\qThree{Why do I have to suffer through this?}
+\aThree{Even if you don't like geophysics you will learn a mathematical \& quantitative approach that people find useful later on. Because we know you don't trust us we made this course mandatory.}
+
+\qFour{Can I call myself a geophysicist after this course ?}
+\aFour{This might be a stretch, but on the other hand this is not a protected term. Go for it! (Advises you career-coach).}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 DESCRIPTION
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 OVERVIEW
+%----------------------------------------------------------------------------------------
+\section{Overview}
+
+\small [Document version \today\ at \currenttime \normalsize]
+
+This course provides a broad overview in applied geophysics with a focus on the most common sub-surface imaging techniques: gravimetry, magnetics, geoelectrics, electromagnetic induction, ground-penetrating radar and seismics. We will discuss applications in industry as well as for general scientific questions in the geo- and environmental sciences. 
+
+Everything is subject to change with news University regulations regarding the pandemic, but at this stage I anticipate a large in-person component.
+
+\section{Lecture Format}
+
+The lecture is accompanied with three mandatory, hands-on field exercises that will be conducted in small groups. The field measurements take approximately six hours and will be concluded by a joint group report. The lecture format contains frontal lectures on Tuesdays in 3M07, group work on experimental \& theoretical exercises on Thursdays in 3U03 and 3F03 and online videos. 
+
+% \vspace{0.5cm} %I make liberal use of the \vspace{} command to partition and place sections just how I want them. Alter as you see fit. 
+% \section{Online format}
+
+% Lectures will be done in a mixed asynchronous and synchronous fashion. Some content will be presented in form of pre-recorded videos. Other content will be synchronous, as are more interactive formats such as joint exercises. All course material and general communication will be organized via Ilias.
+% \begin{center}
+% \begin{tabular}{ p{3cm}|p{3cm} p{3cm}}
+%  \textbf{Zoom Details} & Tuesdays  & Thursdays \\
+%  \hline
+%  Meeting ID   & 867 3242 8599 & 816 5647 0121    \\
+%  Passcode &   927118 & 559372  \\
+%  Link & \MYhref{https://us02web.zoom.us/j/81656470121?pwd=RDVxVEZFMk1GMTA4Ti9lTTRxbGZmdz09}{ThursdayMeeting} & \MYhref{https://us02web.zoom.us/j/86732428599?pwd=RE1velNreTdnSHF5Q3JMWElWNkJyUT09}{TuesdayMeeting} \\
+% \end{tabular}
+% \end{center}
+% \vspace{0.5cm}
+
+\section{Learning Goals}
+
+You should get a broad overview for a number of geophysical methods imaging the sub-surface. You should understand the underlying physical principles, which will enable you to go deeper into specific methods that you may encounter later on. Most importanlty you should learn to think straightforwardly, to ask the right questions, and to apply quantitative mathematical methods in problem solving.
+    
+
+ 
+\vspace{0.5cm}
+\section{Field exercises}
+
+We will conduct in-person applied exercises for magnetics, geoelectrics and seismics. This is your maybe once-in-a-lifetime chance to work with professional geophysical equipment. The practical part of the exercises will typically take about six hours. Exercises are mandatory and absence is only permissible with a substantiated excuse approved by the instructor before the exercise takes place. The exercise will then need to be repeated another day. Don't miss the submission deadline of your group reports communicated by the instructor. If you fail, you will have a chance to revise the report.
+\begin{center}
+\begin{tabular}{ p{3cm}p{5cm} p{3cm}}
+ \textbf{Exercises} & Location  & Time Frame \\
+ \hline
+ Magnetics   & Tübingen Morgenstelle & 22-28.05 2022       \\
+ Geoelectrics &  Tübingen Kilchberg & 08-13.06 2022  \\
+ Seismics & Tübingen Lauswiesen & 05-12.07.2022 \\
+\end{tabular}
+\end{center}
+
+\section{Course organisation}
+
+Sign-up is required both on ALMA and ILIAS. All communication will be handled via Ilias, including video ressources, sign up for field exercises and a forum for questions pertaining to the exercises sheets. The course is open to a maximum amount of 70 students, preference is given to those for which this course is mandatory.
+
+
+\newpage % Start a new page
+
+\makeSide % Print the FAQ sidebar; To get rid of, simply comment out and uncomment \makeFullPage
+
+
+\section{Material}
+
+{\color{myCOLOR} Books in English}\\
+\begin{itemize} 
+\item Florsch \& Muhlach: \textit{"Everyday Applied Geophysics 1/2"}, (Elsevier).
+    
+\item Telford: \textit{"Applied Geophysics"}, ca. 750p. 
+
+\item Sharma: \textit{"Environmental and Engineering Geophysics"}, ca. 470 p. (Cambridge University Press)
+
+\item Griffiths, King: \textit{"Applied Geophysics for Geologists \& Engineers"}, ca. 220 p. (Pergamon Press)
+
+\item Lowrie: \textit{"Fundamentals of Geophysics"}, ca. 340 p. (Cambridge University Press)
+\end{itemize}
+{\color{myCOLOR} Books in German}\\
+\begin{itemize}
+\item Bender: \textit{"Angewandte Geowissenschaften Bd.II: Methoden der Angewandten Geophysik und mathematische Verfahren in d. Geowissenschaften"}, ca. 750p. 
+
+\item Militzer, Weber: \textit{"Angewandte Geophysik"}, 3 Bände. 
+
+\item Clauser: \textit{"Einführung in die Geophysik: Globale physikalische Felder und Prozesse in der Erde"}, ca. 420p. 
+
+\item Clauser: \textit{"Grundlagen der angewandten Geophysik - Seismik, Gravimetrie: Globale physikalische Felder und Prozesse in der Erde"}, ca. 370p. 
+
+\item Knödel, Krummel, Lange: \textit{"Geophysik. Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) - Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten"}, Band 3. \\
+\end{itemize}
+
+Some books are available as online ressource at UT. Review journal articles will be provided on Ilias. 
+
+
+
+
+
+\section{Expectations for the exam}
+
+The written exam will contain a number of basic questions probing your knowledge of the specific topics covered in class. You can answer those typically in a few sentences. This alone is in most cases enough to pass. In order to obtain higher grades, you will need to solve some problems using the level of math that we practiced during the term. For top grades you will need to answer some questions where knowledge needs to be transferred to a problem set that we did not cover in class. Unsurprinsingly, the best exam preparation is usually to solve the exercise sheets independently, and to actively participate in the lecture \& report writing. My goal is that the large majority of you passes the exam.
+
+\section{Grading Scheme}
+
+%below is the \twentyshort environment - a list with only two inputs. However, there is a \twenty environment, which creates a list with four inputs. You can find/alter details of that table in the .cls file c. lines 320. 
+\begin{twentyshort}
+	%\twentyitemshort{X\%}{Attendance/Participation}
+    \twentyitemshort{20\%}{Average grade of three reports.}
+    \twentyitemshort{80\%}{Written exam at the end of the term.}
+\end{twentyshort}
+
+Reports will be graded and you have to pass all of them in order to qualify for the exam. If your  grade of the exam is better than the average grade from all reports, \textit{only} the exam will count. Grades will follow the standard scale, scaling is at my discretion.
+
+
+
+\newpage
+
+% \section{Class Schedule}
+% \begin{table}[!ht]
+%     \centering
+%     %\begin{tabular}{l l l l }
+%     %\begin{tabular}{m{1.5cm} m{2.25cm} m{7cm} m{3cm}}
+%     \begin{tabularx}{\textwidth}{p{2cm}p{9cm}p{6cm}}    
+%     \hline
+%         Session-Nr. & Room & Day & Topic \\ \hline
+%         1 & 3M07 & 19.04.22 & Introduction \&  Gravimetry 1 \\ \hline
+%         2 & 3U03/3F03 & 21.04.21 & Gravimetry Lab 1 \\ \hline
+%         3 & 3M07 & 26.04.22 & Gravimetry 2 \\ \hline
+%         4 & 3U03/3F03 & 28.04.21 & Gravimetry Lab 2 \\ \hline
+%         5 & 3M07 & 03.05.22 & Magnetics 1 \\ \hline
+%         6 & 3U03/3F03 & 05.05.21 & Magnetics Lab 1 \\ \hline
+%         7 & 3M07 & 10.05.22 & Magnetics 2 \\ \hline
+%         8 & 3U03/3F03 & 12.05.21 & Magnetics Lab 2 \\ \hline
+%         9 & 3M07 & 17.05.22 & Maxwell Equations \& Self Potential \\ \hline
+%         10 & 3U03/3F03 & 19.05.21 & Geoelectric 1 \\ \hline
+%         11 & 3M07 & 24.05.22 & Geoelectric Lab 1 \\ \hline
+%         3U03/3F03 & 26.05.21 & ~ & ~ \\ \hline
+%         12 & 3M07 & 31.05.22 & Geoelectric 2 \\ \hline
+%         13 & 3U03/3F03 & 02.06.21 & Geoelectric Lab 2 \\ \hline
+%         3M07 & 07.06.22 & ~ & ~ \\ \hline
+%         3U03/3F03 & 09.06.21 & ~ & ~ \\ \hline
+%         16 & 3M07 & 14.06.22 & Induced Polarization \& EM Induction \\ \hline
+%         3U03/3F03 & 16.06.21 & ~ & ~ \\ \hline
+%         17 & 3M07 & 21.06.22 & EM Polarization \& Induction Lab 1 \\ \hline
+%         18 & 3U03/3F03 & 23.06.21 & Seismic Waves \& Raypaths \\ \hline
+%         19 & 3M07 & 28.06.22 & Seismic Lab 1 \\ \hline
+%         20 & 3U03/3F03 & 30.06.21 & Seimic Refraction \\ \hline
+%         21 & 3M07 & 05.07.22 & Seismic Lab 2 \\ \hline
+%         22 & 3U03/3F03 & 07.07.21 & Seismic Reflection \\ \hline
+%         23 & 3M07 & 12.07.22 & Seismic Lab 3 \\ \hline
+%         24 & 3U03/3F03 & 14.07.21 & Seismology \\ \hline
+%         25 & 3M07 & 19.07.22 & Seismic Lab 4 \\ \hline
+%         26 & 3U03/3F03 & 21.07.21 & Electromagnetic Wave Propagation \\ \hline
+%         27 & 3M07 & 26.07.22 & GPR Lab 1 \\ \hline
+%         28 & 3U03/3F03 & 28.07.21 & Summary Questions \\ \hline
+%         29 & Tentative & 02.08.22 & Tentative Exam Date \\ \hline
+%     \end{tabularx}
+% \end{table}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %                COURSE SCHEDULE
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\makeFullPage
+\section{Class Schedule}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{2.2cm}p{9cm}p{6cm}} %change the width of the comments by changing these cm measurements. Add/substract columns by adding/deleting p{} sections. 
+\arrayrulecolor{myCOLOR}\hline
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MODULE 1
+\multicolumn{3}{l}{\textbf{\textcolor{myCOLOR}{\large Part 1: Introduction \& Gravimetry }}} \\
+\arrayrulecolor{myCOLOR}\hline
+% % Week & Topic & Readings \\ \hline 
+% %%Alternatively, instead of Week #, you can do Class date for meeting
+Weeks 1-2& \vspace{-0.4cm}\begin{itemize}\item Course Outline \item Introduction \item  Earth's Gravitational Field and Potential \item Reduction (Free-Air and Bouger Anomalies)\item Applications \end{itemize} & In-class exercises\\
+\arrayrulecolor{myCOLOR}\hline
+\multicolumn{3}{l}{\textbf{\textcolor{myCOLOR}{\large Part 2: Magnetics }}} \\
+\arrayrulecolor{myCOLOR}\hline
+% % Week & Topic & Readings \\ \hline 
+% %%Alternatively, instead of Week #, you can do Class date for meeting
+Weeks 4-6& \vspace{-0.4cm}\begin{itemize} \item Magnetic Fundamentals \item  The Earth's Magnetic Field \item Magnetic Measurements \item Types of magnetism \item Examples \end{itemize} & In-class exercises\newline Applied exercises\newline Report writing\\
+\arrayrulecolor{myCOLOR}\hline
+\multicolumn{3}{l}{\textbf{\textcolor{myCOLOR}{\large Part 3: Self-Potential, Geoelectrics and Induced Polarization }}} \\
+\arrayrulecolor{myCOLOR}\hline
+% % Week & Topic & Readings \\ \hline 
+% %%Alternatively, instead of Week #, you can do Class date for meeting
+Weeks 5-9& \vspace{-0.4cm} \begin{itemize} \item  Origin and measurement of self-potential \item Vertical \& Horizontal electrical sounding \item IP (time domain)  \item Slingram Method \end{itemize} & In-class exercises\newline Applied exercises\newline Report writing\\
+\arrayrulecolor{myCOLOR}\hline
+\multicolumn{3}{l}{\textbf{\textcolor{myCOLOR}{\large Part 4: Seismics }}} \\
+\arrayrulecolor{myCOLOR}\hline
+% % Week & Topic & Readings \\ \hline 
+% %%Alternatively, instead of Week #, you can do Class date for meeting
+Weeks 10-13& \vspace{-0.4cm}\begin{itemize} \item  Seimic waves \& raypaths \item Refraction seimics \item Reflection Seismics \item Seismology \item Applications \end{itemize} & In-class exercises\newline Applied excercises\newline Report writing\\
+\arrayrulecolor{myCOLOR}\hline
+\multicolumn{3}{l}{\textbf{\textcolor{myCOLOR}{\large Part 5: Electromagnetics }}} \\
+\arrayrulecolor{myCOLOR}\hline
+% % Week & Topic & Readings \\ \hline 
+% %%Alternatively, instead of Week #, you can do Class date for meeting
+Weeks 14& \vspace{-0.4cm}\begin{itemize} \item Electromagnetics waves \& raypaths \item Ground-Penetrating Radar \item Signal Processing \end{itemize} & In-class exercises\\
+
+
+\end{tabularx}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+
+
+
