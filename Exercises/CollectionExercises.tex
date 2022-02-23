@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+%All Layout Packages are defined in the Header.tex
+\include{Header}
+
+%Start the document here.
+\begin{document}
+\section{Exercises for Gravimetry}
+\subsection{The shell theorem}
+\subsection{Gravitational potential inside and outside a sphere with constant density}
+\subsection{Detection of a spherical object in the sub-surface}
+\textbf{(a)} In the lecture we have discussed the general shape of a gravity anomaly for a sphere with radius $R$ located at depth $z$ below the surface. Formulate the problem in a relative sense using density contrasts ($\Delta \rho$). Derive an analytical expression for the vertical anomaly as a function of the lateral distance $x$ and depth $z$. Calculate the maximum anomalies that you would expect for some realistic settings (e.g., a limestone cave.)\\
+
+\noindent\fcolorbox{myblue}{lightgray}{\parbox{\textwidth}{
+\textbf{Solution:} Because we have a spherical object, there is not much difference to the point mass scenario discussed in class. The gravitational force exhibited by the sphere is:
+$$
+\vec{g} = G\frac{M}{r^2}\hat{r}
+$$
+The mass anomaly $M$ (formulated in a relative sense) of the sphere is given by:
+$$
+M = \frac{4}{3}\pi R^3 \Delta \rho
+$$
+At distance $x$ the distance to the sphere is $r=\sqrt{x^2+z^2}$. The gravimeter only measures the vertical component of $\vec{g}$:
+$$
+g_z = |\vec{g}|\sin\alpha = |\vec{g}|\frac{z}{r}
+$$
+% \begin{center}
+% \includegraphics[width=0.5\textwidth]{SphereSketch.png}
+% \end{center}
+
+which brings us to:
+\begin{align*}
+g_z &= \frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^2} \frac{z}{r} \\
+&= \frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^3} z \\
+& = \frac{4}{3}\pi R^3 \Delta \rho G \frac{z}{(x^2+z^2)^\frac{3}{2}}
+\end{align*}
+We will encounter the maximum value of the anomaly at $x = 0$ (directly above the target):
+$$
+g_{z,max} = \frac{4}{3}\pi R^3 \Delta \rho G \frac{1}{z^2}
+$$
+which for the limestone cave example is approximately -0.35 mGal (see below).
+}}
+\pagebreak
+
+
+\noindent \textbf{(b)} Use a piece of software of your choice (e.g., Excel, SciDAVis, Matlab, Python) and plot the expected vertical gravity anomaly for a specific setting as a function of lateral distance $x$. Visualize how this profile changes as you vary, e.g., the depth of the object. Label your axis and post a picture in the forum alongside with a comment which software you used.
+
+
+\lstinputlisting[language=matlab]{../Src/Exercises/Gravimetry/Gravimetry01.m}
+%\end{lstlisting}
+% \begin{center}
+% \includegraphics[width=0.5\textwidth]{../GravityAnomaly.png}
+% \end{center}
+
+% \noindent\textbf{(c)} We now investigate what information can be gained from the half-width of this anomaly. For this you have to derive an expression that links the half-width of the anomaly (i.e. $g_z = \frac{1}{2}g_{z,max}$ for $x=x_{\frac{1}{2}}$) to the depth of the object. Use this relationship and see if you can infer the depth of the object using the halfwidth. Why could such a relationship be useful?
+
+
+% \noindent\fcolorbox{myblue}{lightgray}{\parbox{\textwidth}{
+% \textbf{Solution:}
+% \begin{align*}
+% g_z &=\frac{1}{2}g_{z,max} \\
+% \rightarrow \frac{z}{(x_{\frac{1}{2}}+z^2)^\frac{3}{2}} &= \frac{1}{2z^2}\\
+% \rightarrow \frac{z^3}{(x_{\frac{1}{2}}+z^2)^\frac{3}{2}}&= \frac{1}{2}\\
+% \rightarrow \frac{1}{(\frac{x_{\frac{1}{2}}}{z^2}+1)^\frac{3}{2}}&= \frac{1}{2}\\
+% \rightarrow z = \frac{x}{\sqrt{2^{\frac{3}{2}}-1}}\approx 0.766 x
+% \end{align*}
+% }}
+% \subsection{Potential of an infite plate (Bouger plate)}
+
+
+
+
+\end{document}
