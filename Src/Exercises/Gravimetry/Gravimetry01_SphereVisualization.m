@@ -43,6 +43,3 @@ ylabel('g_z anomaly (mGal)')
 %Export to a png. (This can be done much better.)
 set(findall(fig, '-property', 'FontSize'), 'FontSize', 15, 'fontWeight', 'bold')
 print('-dpng','-r300','GravityAnomaly.png')
-
-
--2*G_SI*6.0e24/((6370*1000)^3)*100*1000
