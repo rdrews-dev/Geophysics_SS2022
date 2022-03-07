@@ -4,46 +4,67 @@
 \newif\ifanswers
 \answerstrue % comment out to hide answers
 %Start the document here.
+
 \begin{document}
-
-
+\newcounter{mycounter}
+\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=burgundy,title=Expectations for Exercises]
+    Exercises are an important part of the Geophysics lecture. They will treat some aspects of the lecture in more detail, but also cover new ground. We expect that you work on the exercises at home and we will discuss questions and solutions interactively together. The joint meetings will start with randomly chosen students presenting their approach. It is ok if the full solution is not available at this stage and there will be no interrogation. However, please don't show up unprepared because this will inevitably be awkward. 
+\end{tcolorbox}
 
 \section{Exercises for Gravimetry}
 \subsection{Determining the mean density of the Earth with your own gravimeter}
-\noindent The vertical gravitational acceleration of a freely falling test object can be determined by measuring the traveltime for a known distance. Assuming that the radius of the Earth and the gravitational constant are known ($G\approx6.674\cdot10^{-11}$ m$^{3}$kg$^{-1}$s$^{-2}$,$R_E \approx 6370 $) the mass of the Earth can be determined with the basic principles derived in class.\\ 
-\\
-\noindent (a) Your task is to design a home-built free-fall gravimeter that does the job. You will quickly realize that the time measurement (i.e. the time from the start to the end of the fall) is one critical aspect in the system design. A helper tool that we suggest is the \textit{acoustic stopwatch} that can be accessed via a smartphone and the \textit{phyphox} app. Figure out an efficient way how the traveltime of a freely falling object can be determined with this type of acoustic trigger.\\
-\\
+\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=burgundy,title=Group Work,
+    watermark color=white]
+    Self-organize in groups with 5-6 team members. Choose a group name and a team captain that communicates with the instructors. It is ideal if this group stays together throughout the term for the applied exercises. Make sure that your are inclusive during the group formation.
+\end{tcolorbox}
 
-\noindent (b) Collect a dataset of traveltimes and derive the mass of the earth. Provide an error estimate. Can you identify a measurement bias? How does your result compare to literature values? \\
-\\
-\noindent (c) Given your result, what is the mean density of the Earth? How does that compare to rock densities found at the Earth's surface? What is a main conclusion that you can draw from this?\\
- \\
-\noindent (d) Post your result, your dataset and a picture of your system setup in the ILIAS forum. \\
- \\
-\noindent (e) Extra: Are you a tinkerer/Bastler? If so, feel free to improve the system design, e.g., by using light barriers in combination with a raspberry pi nano. We are more than happy to buy material for you, the only constraint is that it works reliably and that it remains cheapish (let's say $<$100 Euro). If you succeed (success will be determined at the disgression of the instructor panel), you will win a gift certificate of 50 Euros that can be used in a Tübingen pub of your choice to celebrate your victory with your peers. Moreover, your system will be used for eternity for the following classes giving you much honor within the geo- and environmental student community (until somebody comes up with something better).
+  The vertical gravitational acceleration can be determined by measuring the traveltime of a freely falling object for a known distance. Assuming that the radius of the Earth and the gravitational constant are known ($G\approx6.674\cdot10^{-11}$ m$^{3}$kg$^{-1}$s$^{-2}$, $R_E \approx 6370 $) the mass of the Earth can be determined with the basic principles derived in class.
 
+  \begin{enumerate}[label=(\alph*)]
+    \item Your task is to design a home-built free-fall gravimeter that does the job. You will quickly realize that the time measurement (i.e. the time from the start to the end of the fall) is one critical aspect in the system design. A helper tool that we suggest is the \textit{acoustic stopwatch} that can be accessed via a smartphone and the \textit{phyphox} app. Figure out an efficient way how the traveltime of a freely falling object can be determined with this type of acoustic trigger.
+    
+    \item Collect a dataset of traveltimes and derive the mass of the earth. Provide an error estimate. Can you identify a measurement bias? How does your result compare to literature values? 
+    
+    \item Given your result, what is the mean density of the Earth? How does that compare to rock densities found at the Earth's surface? What is a main conclusion that you can draw from this?
 
+    \item Post your result, your dataset and a picture of your system setup in the ILIAS forum. 
+
+    \item Extra: Are you a tinkerer/Bastler? If so, feel free to improve the system design, e.g., by using light barriers in combination with a raspberry pi nano. We are more than happy to buy material for you, the only constraint is that it works reliably and that it remains cheapish (let's say $<$100 Euro). \textbf{If you succeed, you will win a gift certificate of that can be used in a Tübingen pub of your choice to celebrate your victory with your peers.} Moreover, your system will then be used for eternity for the following classes giving you much honor within the geo- and environmental student community.
+  \end{enumerate}
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    I made a video with a possible setup here: 
+    \begin{center}
+        \href{https://www.youtube.com/watch?v=q5SdryMp8iw&feature=youtu.be}{Link to Video} 
+    \end{center}
+
+  \end{tcolorbox}
 \subsection{The shell theorem}
 \label{Sec:Shell{}}
 \pagebreak
 \subsection{Gravitational acceleration inside the Earth}
-Knowing the gravitational acceleration \textit{inside} the Earth is important, e.g., for understanding processes related to mantel convection. \\
-\\
-\noindent (a) Use the consequences of the shell theorem to predict the gravitational acceleration $g(r)$ inside a spherical Earth. First assume that the Earth's density is constant, then that it decreases linearly with distance from the center. Assume that the density in the core is approximately $\rho_{core} = 13 \frac{g}{cm^3}$ and in the crust approximately $\rho_{crust} = 2.7 \frac{g}{cm^3}$.\\
-\\
-\noindent (b) Draw the results on a x-y graph on paper or using a software of your choice.\\
-\\
-\noindent (c) The PREM model provides an observationally constrained estimate of the density distribution inside the Earth. Knowing the shape of this profile, what is your guess of the gravitational acceleration inside the Earth? Why is it more difficult for you to calculate this quantitatively compared to the previous cases of constant and linearly varying density?\\
-\\
-\noindent (d) Extra: Calculate the gravitational acceleration inside the Earth based on the PREM model using Matlab/Python/Excel. The data can be found on Ilias.
+Knowing the gravitational acceleration \textit{inside} the Earth is important, e.g., for understanding processes related to mantel convection.
+\begin{enumerate}[label=(\alph*)]
+  \item Use the consequences of the shell theorem to predict the gravitational acceleration $g(r)$ inside a spherical Earth. First assume that the Earth's density is constant, then that it decreases linearly with distance from the center. Assume that the density in the core is approximately $\rho_{core} = 13 \frac{g}{cm^3}$ and in the crust approximately $\rho_{crust} = 2.7 \frac{g}{cm^3}$.
+
+  \item Draw the results on a x-y graph on paper or using a software of your choice.
+
+  \item The PREM model provides an observationally constrained estimate of the density distribution inside the Earth. Knowing the shape of this profile, what is your guess of the gravitational acceleration inside the Earth? Why is it more difficult for you to calculate this quantitatively compared to the previous cases of constant and linearly varying density?
+
+  \item Extra: Calculate the gravitational acceleration inside the Earth based on the PREM model using Matlab/Python/Excel. The data can be found on Ilias.
+\end{enumerate}
 \begin{center}
     \includegraphics[width=0.5\textwidth]{Figures/Gravimetry/Gravimetry01_PREM.png}
  \end{center}
 \ifanswers
-    \noindent \textbf{Solutions:}
-
-    \noindent (a) At location $l<R$ inside the Earth, we do not need to worry about the mass distribution for distances $>l>R$ as these will cancel out due to the spherical symetry. Also the the acceleration will only have a radial component. Hence,
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+ 
+      (a) At location $l<R$ inside the Earth, we do not need to worry about the mass distribution for distances $>l>R$ as these will cancel out due to the spherical symetry. Also the the acceleration will only have a radial component. Hence,
     \begin{equation}
         |\vec{g}(l)| = G\frac{M}{l^2}
     \end{equation}
@@ -80,17 +101,25 @@ Knowing the gravitational acceleration \textit{inside} the Earth is important, e
     \begin{center}
         \includegraphics[width=0.99\textwidth]{Figures/Gravimetry/Gravimetry01_GravityInsideEarth.png}
      \end{center}
-     so that the gravitational acceleration now changes quadratically. Is this realistic? We will have to compare it with a realistic dataset such as the PREM model.
+     so that the gravitational acceleration now changes quadratically as shown in the Figure above. Is this realistic? We will have to compare it with a realistic dataset such as the PREM model.
 
-     \noindent Because we don't have an analytical expression for the PREM density model, we cannot pursue an analytical integration as done in the previous two cases. Hence we do it numerically:
+  (c) Because we don't have an analytical expression for the PREM density model, we cannot pursue an analytical integration as done in the previous two cases. Hence we do it numerically:
      \lstinputlisting[language=matlab]{../Src/Exercises/Gravimetry/Gravimetry03_GravityInsideSphere.m}
+    \end{tcolorbox}
 \fi
 \pagebreak
 
 
 \subsection{Detection of a spherical object in the sub-surface}
 \label{Sec:SphereInSubsurface}
-\textbf{(a)} Consider a spherical object with radius $R$ located at depth $z$ below the surface, and a gravimeter that is moved along the surface across the anomaly (Fig.\ref{Fig:SphereInSubsurface}) Derive an analytical expression for the expected \textit{vertical} anomaly $g_z$ as a function of the lateral distance $x$ and depth $z$. Calculate the maximum anomalies that you would expect for some realistic settings (e.g., a limestone cave.)\\
+\textbf{(a)} Consider a spherical object with radius $R$ located at depth $z$ below the surface, and a gravimeter that is moved along the surface across the anomaly (Fig.\ref{Fig:SphereInSubsurface}) Derive an analytical expression for the expected \textit{vertical} anomaly $g_z$ as a function of the lateral distance $x$ and depth $z$. Calculate the maximum anomalies that you would expect for some realistic settings (e.g., a limestone cave.)
+
+  \textbf{(b)} Use a piece of software of your choice (e.g., Excel, SciDAVis, Matlab, Python) and plot the expected vertical gravity anomaly for a specific setting as a function of lateral distance $x$. Visualize how this profile changes as you vary, e.g., the depth of the object. Label your axis and post a picture in the forum alongside with a comment which software you used.
+
+
+ \textbf{(c)} We now investigate how we can estimate the depth of the object from an anomaly as derived in (a,b). For this you have to derive an expression that links the half-width of the anomaly (i.e. $g_z = \frac{1}{2}g_{z,max}$ for $x=x_{1/2}$) to the depth $z$ of the object. Derive this relationship which has the form $z = c x_{1/2}$. Why is such a relationship be useful?
+
+
 \begin{figure}
 \centering
 \begin{minipage}[c]{0.5\textwidth}
@@ -103,8 +132,9 @@ Knowing the gravitational acceleration \textit{inside} the Earth is important, e
 \end{figure}
 
 \ifanswers
-    \noindent\fcolorbox{myblue}{lightgray}{\parbox{\textwidth}{
-    \begin{center}
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+     \begin{center}
        \includegraphics[width=0.5\textwidth]{Figures/Gravimetry/Gravimetry01_SphereSketchSolutions.png}
     \end{center}
     \textbf{Solution:} Because we have a spherical object, we can use the shell theorem and treat it as a point mass. The gravitational force exhibited by the sphere is:
@@ -121,48 +151,59 @@ Knowing the gravitational acceleration \textit{inside} the Earth is important, e
     $$
   
     which brings us to:
-    \begin{align*}
-    g_z &= -\frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^2} \frac{z}{r} \\
-    &= -\frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^3} z \\
-    & = -\frac{4}{3}\pi R^3 \Delta \rho G \frac{z}{(x^2+z^2)^\frac{3}{2}}
-    \end{align*}
+    \begin{eqnarray*}
+    g_z &=& -\frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^2} \frac{z}{r} \\
+        &=& -\frac{4}{3}\pi R^3 \Delta \rho \frac{G}{r^3} z \\
+        &=& -\frac{4}{3}\pi R^3 \Delta \rho G \frac{z}{(x^2+z^2)^\frac{3}{2}}
+    \end{eqnarray*}
     We will encounter the maximum value of the anomaly at $x = 0$ (directly above the target):
     $$
     g_{z,max} = \frac{4}{3}\pi R^3 \Delta \rho G \frac{1}{z^2}
     $$
     which for the limestone cave example is approximately -0.35 mGal (see below).
-    }}
-    \pagebreak
-\fi
+    
 
-\noindent \textbf{(b)} Use a piece of software of your choice (e.g., Excel, SciDAVis, Matlab, Python) and plot the expected vertical gravity anomaly for a specific setting as a function of lateral distance $x$. Visualize how this profile changes as you vary, e.g., the depth of the object. Label your axis and post a picture in the forum alongside with a comment which software you used.
 
-\ifanswers  
     \lstinputlisting[language=matlab]{../Src/Exercises/Gravimetry/Gravimetry01_SphereVisualization.m}
     \begin{center}
         \includegraphics[width=0.5\textwidth]{Figures/Gravimetry/Gravimetry01_Visualization.png}
     \end{center}
-\fi
-
-\noindent\textbf{(c)} We now investigate how we can estimate the depth of the object from an anomaly as derived in (a,b). For this you have to derive an expression that links the half-width of the anomaly (i.e. $g_z = \frac{1}{2}g_{z,max}$ for $x=x_{1/2}$) to the depth $z$ of the object. Derive this relationship which has the form $z = c x_{1/2}$. Why is such a relationship be useful?
-
-
-\noindent\fcolorbox{myblue}{lightgray}{\parbox{\textwidth}{
-\textbf{Solution:} This requires some arithmetic manipulation to isolate $z$.
-\begin{align*}
+ 
+This requires some arithmetic manipulation to isolate $z$.
+\begin{eqnarray*}
 g_z &=\frac{1}{2}g_{z,max} \\
 \rightarrow \frac{z}{(x^2_{1/2}+z^2)^\frac{3}{2}} &= \frac{1}{2z^2}\\
 \rightarrow \frac{z^3}{(x_{\frac{1}{2}}+z^2)^\frac{3}{2}}&= \frac{1}{2}\\
 \rightarrow \frac{1}{(\frac{x_{\frac{1}{2}}}{z^2}+1)^\frac{3}{2}}&= \frac{1}{2}\\
 \rightarrow z = \frac{x_{1/2}}{\sqrt{2^{\frac{2}{3}}-1}}\approx 1.305 x_{1/2}
-\end{align*}
-Those expressions can be useful to estimate the depth of an object from an observed anomlay without using a full forward model. However, this only works if the object is indeed spherical (which we usually don't know necessarily ahead of time.) Similar estimates exists for other shapes (e.g., horizontal and vertical cylinders).
-}}
+\end{eqnarray*}
+Those expressions can be useful to estimate the depth of an object from an observed anomlay without using a full forward model. However, this only works if the object is close to spherical (which we usually don't know necessarily ahead of time.) Similar estimates exists for other shapes (e.g., horizontal and vertical cylinders).
+\end{tcolorbox}
+\fi
 \pagebreak
 \subsection{Potential of an infinte plate (Bouger plate)}
 \pagebreak
 
 
 \subsection{Forward modelling and non-uniqueness in potential field methods}
+\label{Sec:GravityForwardModelling}
+In order to predict how any kind of object will appear in a gravity survey, we need to solve the volume integral:
+$$
+ \vec{g}(r) = G\int \frac{1}{r^3} \rho(r) \vec{r} dV 
+$$
+which simplifies slightly to:
+$$
+ g_z(r) = G\int \frac{1}{r^2} \cos(\phi)\rho(r) dV = G\int \frac{z}{r^3} \rho(r) dV
+$$
+because often only the vertical component is of interest (Ex. cf. \ref{Sec:SphereInSubsurface}).
+However, the problem remains complicated as the integration bounds depend on the object's geometry and the integral needs to be solved for every $r$ along the gravimetry profile. Some solutions for special shapes you already know (e.g.sphere, bouger plate). Here we use the solution for a rectangular prism which fortunately others have already calculated for us (\textit{Naggy 1966, Geophysics VOL. XXX, SO. 2}). Using this solution, we can build up more complicated shapes out of individual prisms.
+
+In the specific model applied individual prisms are defined with their widths in the horizontal (wx, wy) and the vertical (wz), together with the positions in the subsurface. The key is that the position coordinates (dx1, dx2, dy1, dy2, dz1, dz2) need to be prescribed relative to the measurement position which changes along the profile. The expected anomaly is then calculated based on the analytical solution.
+
+  (a) This exercises uses Matlab. However, only minimal Matlab skills are required to follow along. Download the files \textit{Gravimetry02\_ForwardModelling.m} and \textit{gravprism.m} into the same folder on your computer. Check out case 1 which simulates a rectangular object in the subsurface. Change it's location and size so that you know what is going on.
+
+  (b) Switch to case 2. This one treats the combined effect of two prisms. See what's different compared to case 1. Play around with positions to see what is going on.
+
+  (c) Switch to case 3. This one treats the individual effects of two prisms meaning that it doesn't sum them up. This one will not run until you fill out the parts marked with XXX. Use this case to illustrate that multiple situations in the sub-surface (e.g. a shallow prism with low density contrast vs. a lower prism with larger density contrast) can result in a very similar anomalies. This is a VERY important finding. Forward models are not unique, and therefore your interpretation won't be either. This situation occurs in many geophysical situations. Remember that.
 
 \end{document}

@@ -13,7 +13,7 @@ close all;
 % Two Rectangles: 2;
 % Ambiguities: 3
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-CaseNumber = 3;
+CaseNumber = 1;
 
 switch CaseNumber
     case 1
