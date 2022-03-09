@@ -1,0 +1,84 @@
+\ProvidesPackage{ep-dark}
+
+\usepackage{sansmathfonts}
+\usepackage{helvet}
+
+\definecolor{BlockBack}{RGB}{0,0,100}
+\definecolor{PMS288}{RGB}{0,45,114}
+\definecolor{PMS116C}{RGB}{255,205,0}
+
+\setbeamercolor{lower separation line head}{bg=PMS116C}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}[from second]
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamercolor{alerted text}{fg=PMS116C}
+\setbeamercolor{normal text}{fg=white,bg=black}
+\setbeamercolor{structure}{fg=white}
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+\setbeamercolor*{framesubtitle}{fg=white}
+\setbeamercolor*{block title}{parent=structure,bg=black!80}
+\setbeamercolor*{block body}{fg=white,bg=PMS288}
+\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+\setbeamercolor*{block title example}{parent=example text,bg=black!15}
+\makeatletter
+\defbeamertemplate*{frametitle}{jsu}[1][left] % mostly copied from beamerouterthemedefault.sty
+{%
+  \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+  \@tempdima=\textwidth%
+  \advance\@tempdima by\beamer@leftmargin%
+  \advance\@tempdima by\beamer@rightmargin%
+  \begin{beamercolorbox}[sep=0.3cm,#1,wd=\the\@tempdima]{frametitle}
+    \usebeamerfont{frametitle}%
+    \vbox{}\vskip-1ex%
+    \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
+    \strut\insertframetitle\strut\par%
+    {%
+      \ifx\insertframesubtitle\@empty%
+      \else%
+      {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+      \fi
+    }%
+    \vskip-1ex%
+    \if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+  \end{beamercolorbox}%
+%   %%%%%%% this part is added: line below title / subtitle:
+\ifx\insertframetitle\@empty%
+\else%
+		{\vskip-0.6\baselineskip
+		\begin{beamercolorbox}[colsep=0.20pt,wd=\paperwidth]{lower separation line head}%
+		\end{beamercolorbox}}%
+\fi
+}\makeatother
+
+
+\setbeamercolor{title page}{fg=white}
+
+
+\setbeamertemplate{title page}{%
+  \begin{center}
+    \normalsize\inserttitle\\
+    \large\insertauthor\\[18pt]
+    \LARGE\insertinstitute 
+  \end{center}
+}
+
+
+% EP Specific stuff
+
+\newcommand{\coursename}[1]{\title{#1}}
+\newcommand{\modulenumber}[1]{\author{Module #1}}
+\newcommand{\modulename}[1]{\institute{#1}}
+
+
+\newcommand{\titleframe}{%
+  \begin{frame}[c]
+    \titlepage
+  \end{frame}
+}
+
