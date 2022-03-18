@@ -1,0 +1,117 @@
+\documentclass[t,14pt,aspectratio=169]{beamer}
+\usepackage{ep-dark}   % JHU/WSE style for use on Lightboard
+\usepackage{graphicx}  % for inclusion of graphics
+\usepackage{amsmath}   % good for additional math
+\usepackage{amsthm}    % theorems, definitions, etc
+
+%\usetheme{CambridgeUS}
+
+%% Oh yes. TIKZ pictures / graphs
+%% -------------------------------------
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{shadings,intersections}
+
+
+%% This is the UT logo in the top right.
+%% -------------------------------------
+\logo { 
+\begin{tikzpicture}[overlay,remember picture]
+\coordinate (A) at (-4.3,8.0);
+\node[left=0.2cm] at (current page.27){
+    \includegraphics[width=3cm]{Figures/General/UT_WBMW_Rot_RGB_01.png}
+    %\includegraphics[width=3cm]{Figures/General/UT_WBMW_Weiss_1C_tr.png}    
+};
+\node[text=Karminrot] at (A) {\tiny Introduction to Geophysics};
+\end{tikzpicture}
+}
+%% -------------------------------------
+
+%% -------------------------------------
+%% Customized Environments
+
+%%Empty column left, 1/3 filled right
+%%Arguments is frametitle 
+\newenvironment{PointThree}[1]
+{  \frametitle{#1}
+  \begin{columns}[c, onlytextwidth]%EVEN SPECIFYING THE c OPTION
+    \begin{column}{.6\textwidth}%
+        \setlength{\partopsep}{0pt}%AND EVEN REMOVING EXTRA itemize SPACE
+        % Keep this empty
+    \end{column}%
+    \begin{column}{.35\textwidth}
+}
+{
+    \end{column}%
+  \end{columns}
+}
+\newenvironment{PointSix}[1]
+{ 
+  \frametitle{#1}
+  \begin{columns}[c, onlytextwidth]%EVEN SPECIFYING THE c OPTION
+    \begin{column}{.35\textwidth}%
+        \setlength{\partopsep}{0pt}%AND EVEN REMOVING EXTRA itemize SPACE
+        % Keep this empty
+    \end{column}%
+    \begin{column}{.6\textwidth}
+}
+{
+    \end{column}%
+  \end{columns}
+}
+
+%Input frame title and content left.
+\newenvironment{ThreeCols}[2]
+{
+  \frametitle{#1}
+  \begin{columns}[c, onlytextwidth]
+    \begin{column}{.32\textwidth}%
+        \setlength{\partopsep}{0pt}%AND EVEN REMOVING EXTRA itemize SPACE
+        #2
+    \end{column}%
+    \begin{column}{.32\textwidth}
+      %empty 
+    \end{column}%
+    \begin{column}{.32\textwidth}
+
+}
+{
+    \end{column}%
+  \end{columns}
+}
+%% -------------------------------------
+
+%% This is when making tikz plots
+%% -------------------------------------
+\pgfplotsset{rdstyle/.style={%
+        width=8cm,
+        ylabel={y},
+        xlabel={x},
+        xmin=-2,xmax=3,
+        xtick={-2,-1,...,3}}}
+%% -------------------------------------
+
+
+\title{Introduction to Geophysics}
+\author{R. Drews}
+\date{\today}
+
+
+\begin{document}
+
+% These commands create the first slide
+% \coursename specifies the name of the course. No need to include the
+% course number especially since they change from time to time
+%
+% \modulename is the name of this particular lesson
+
+\coursename{Introduction to Geophysics}
+\modulename{Gravimetry}
+\titleframe
+
+
+\include{Includes/Gravimetry_01}
+
+
+
+\end{document}

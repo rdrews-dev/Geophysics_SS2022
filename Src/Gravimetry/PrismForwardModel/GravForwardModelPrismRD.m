@@ -47,17 +47,22 @@ switch CaseNumber
         dg = gravprism(drho,dx1,dx2,dy1,dy2,dz1,dz2); 
         
         % Here we visualize the results.
-        figure()
+        fig = figure()
         subplot(3,1,1)
         plot(xp,dg)
-        xlabel('Horizontal Distance x (km)');ylabel('Gravity Anomaly (mGal)');
+        ylabel('Gravity Anomaly (mGal)');box off;set(gcf, 'color', 'none');set(gca, 'color', 'none');
         subplot(3,1,2)%[x y w h]
         rectangle('Position',[-wx/2,offsetz,wx,wz]);
         set(gca,'XAxisLocation','top','YAxisLocation','left','ydir','reverse');
-        xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Depth (m)');
+        xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Depth (m)');ylim([0,2]);set(gcf, 'color', 'none');set(gca, 'color', 'none');
         subplot(3,1,3)%[x y w h]
         rectangle('Position',[-wx/2,-wy/2,wx,wy]);
         xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Horizontal Distance y (km)');
+        %Export to a png. (This can be done much better.)
+        set(gcf, 'color', 'none');set(gca, 'color', 'none');
+        set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 10 20])
+        set(findall(fig, '-property', 'FontSize'), 'FontSize', 12)
+        print('-dpng','-r300','../../../LatexSlidesLectures/Figures/Gravity/Exported/ForwardModelPrism.png')
    case 2
         display('Calculating the effect of multiple rectangles.')
         % This is the density contrast
