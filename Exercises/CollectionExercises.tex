@@ -217,6 +217,49 @@ In the specific model applied individual prisms are defined with their widths in
   colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
   watermark color=white]
   \lstinputlisting[language=matlab]{../Src/Gravimetry/PrismForwardModel/GravForwardModelPrismRD.m}
-
 \end{tcolorbox}
+
+
+\section{Some general questions to reflect on}
+
+\textbf{1. Why does the mean sea level follow the shape of the Geoid?}
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+  Fluids cannot sustain shear stresses. If shear stresses exist the fluid surface will adjust so that the net force is normal to the surface. Without flow the gravitational field will therefore be perpendicular to the ocean surface, which is the definition of an equipotential line. The gravitational force along that line may vary.
+  \end{tcolorbox}
+
+\textbf{2. How can you describe the gravitational attraction between two point masses if none of them is located in the origin of the coordinate system applied?}
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+    $$
+      \vec{F}(\vec{r}) = -GmM \frac{1}{||\vec{r}-\vec{r_0}||^2}\frac{\vec{r}-\vec{r}_0}{||\vec{r}-\vec{r}_0||}=-GmM \frac{1}{||\vec{r}-\vec{r_0}||^3}\vec{r}-\vec{r}_0
+    $$
+    \begin{center}
+    \begin{tikzpicture}[font=\boldmath]\large
+      % Punkte
+      \coordinate (O) at (0,0) {};
+      \coordinate (A) at (6,1) {};
+      \coordinate (B) at (2,7) {};
+      % Draw the triangle
+      % \filldraw (O) circle (3pt);
+      % \filldraw (A) circle (7pt) node[sloped,midway, above] {$M$};
+      % \filldraw (B) circle (3pt) node[sloped,midway, above] {$m$};
+      \draw[dashed, gray] (0,0) grid (7,7);
+      \node[draw,circle,label=right:m] (CircleNode) at (A)  {};
+      \node[draw,circle=15pt,label=right:M] (CircleNode) at (B)  {};
+      \draw[->, ultra thick, blue,   arrows={-latex}]  (O) -- (A) node[sloped,midway, above] {$\vec{r}$};
+      \draw[->, ultra thick, blue,  arrows={-latex}]  (O) -- (B) node[sloped,midway,above=-0.1cm] {$\vec{r}_0$};
+      \draw[->, ultra thick, red, arrows={-latex}]  (A) -- (B) node[sloped,midway,above=-0.1cm] {$\vec{r}-\vec{r}_0$};
+  \end{tikzpicture}  
+\end{center}
+\end{tcolorbox}
+\textbf{3. How does and equipotential line change by crossing an area of (a) mass deficit, and (b) mass excess?}
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+  For a mass deficit the gravitational vectors will point away from the anomaly. Therefore the corresponding equipotential lines is curved downwards. The opposite holds for a mass excess. I didn't figure out how to draw that yet in tikz.
+  \end{tcolorbox}
+
 \end{document}

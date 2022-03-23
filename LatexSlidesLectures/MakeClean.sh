@@ -1,0 +1,24 @@
+rm *.aux
+rm *.log
+rm *.nav
+rm *.out
+rm *.py
+rm *.snm
+rm *.toc
+rm *.nav
+rm *fls
+rm *synctex.gz
+rm *fdb_latexmk
+rm LectureTemplate.pdf
+
+rm Includes/*.aux
+rm Includes/*.log
+rm Includes/*.nav
+rm Includes/*.out
+rm Includes/*.py
+rm Includes/*.snm
+rm Includes/*.toc
+rm Includes/*.synctex.gz
+rm Includes/*.fls
+rm Includes/*.fdb_latexmk
+rm Includes/Gravimetry_01.pdf
