@@ -182,7 +182,7 @@ Those expressions can be useful to estimate the depth of an object from an obser
 \end{tcolorbox}
 \fi
 \pagebreak
-\subsection{Potential of an infinte plate (Bouger plate)}
+\subsection{Potential of an infinite plate (Bouger plate)}
 \pagebreak
 
 
@@ -218,6 +218,62 @@ In the specific model applied individual prisms are defined with their widths in
   watermark color=white]
   \lstinputlisting[language=matlab]{../Src/Gravimetry/PrismForwardModel/GravForwardModelPrismRD.m}
 \end{tcolorbox}
+
+\subsection{Airy and Pratt hypothesis for mountain ranges}
+\textbf{(a)}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Figures/Gravimetry/Pratt.png}
+\end{center}
+
+The figure above illustrates a crust with  with a inhomogenous density and a mountain change floating on the asthenosphere. Consider this as an idealised case in which every vertical slice is locally balanced (i.e. everything is in hydrostatic equilibrium which reduces to an effective 1D problem). Calculate the required densities in the vertical slices at $P_1 -- P_3$. (Tip: Below the crust the pressure is equal everywhere $P_1 -- P_3$)
+
+
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+The hydrostatic pressure $p$ at $P_1$ is $p ~ \rho g H_1$ with $H_1=40$~km. This is the same for the other locations. Hence:
+\begin{align*}
+\rho_0 H_1 &= \rho_1 (H_1 + 2) \\
+\rightarrow \rho_1 &= \rho_0 \frac{H_1}{H_1+2} \approx 2.76 \, \text{g cm}^{-3}
+\end{align*}
+Equivalent for the other locations.
+\end{tcolorbox}
+
+\textbf{(b)}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Figures/Gravimetry/Airy.png}
+\end{center}
+
+The figure above illustrates a crust with a homogenous density and a mountain change floating on the asthenosphere. Consider this as an idealised case in which every vertical slice is locally balanced (i.e. everything is in hydrostatic equilibrium which reduces to an effective 1D problem). Calculate the thickness differences between $P_1 -- P_3$.
+
+
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+At the depth of $P_1$ we have:
+\begin{align*}
+\rho_c H_1 + \rho_A H_A &= \rho_c (H_1 + 2) \\
+\rightarrow H_A &= 2 \frac{\rho_c}{\rho_A -\rho_c} \approx 11.6 \, \text{km}
+\end{align*}
+This means thickness at $P_1$ is 40 + 2 + 11.6 = 53.6 km. Equivalent for the other locations.
+\end{tcolorbox}
+
+
+\textbf{(c)} Draw an approximate profile for the free-air and the Bouger anomalies. How would this profile change if the mountain change is not in hydrostatic equilibrium? Which conclusions regarding the temporal evolution of the mountain chain would you draw from that? In which areas along this profile do you think is the assumption of local hydrostatic equilibrium most unlikely and how would this be reflected in the free-air anomaly?
+\ifanswers
+  \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+    \begin{center}
+    \includegraphics[width=0.9\textwidth]{Figures/Gravimetry/SolutionsProfiles.png}
+    \end{center}
+    \textbf{Text directly copied from: \href{https://www.geology.cwu.edu/facstaff/tim/TEACHING/Geophysics/gravity_geoid.pdf}{Link2PDF}}
+    We can use gravity measurements to determine whether an area is in isostatic equilibrium. If a region is in isostatic equilibrium, there should be no gravity anomaly and hence no excess or lack of mass above the compensation depth. However, in practice, interpreting gravity measurements is a convoluted process. As an example, take the mountains shown above which are in 100\% isostatic compensation of the Airy type. The Bouguer anomaly across these mountains is negative, since below sea level there is a mass deficit under the mountains, ie, the low density root is holding the overlying mountains up. The Bouguer
+    anomaly reflects the fact that the overlying mountains have been removed from the correction, which leaves only the mass deficit at depth unaccounted for, which causes the negative Bouguer anomaly. The free air anomaly, on the other hand, will be slightly positive, since this anomaly only takes into account the fact that we’re above sea level in our measurements and doesn’t take into account the distribution of mass below us. The slight positive reading comes from the fact that the overlying mountain is closer to us
+    and and our point of measurement than is the compensating low density material at depth, and since gravitational acceleration drops off as $1/r^2$, the closer, mountain attraction io stronger than the more distant lack of attraction due to the mass deficit in the root, which results in a slight positive free air anomaly. The simplest way to determine whether a large-scale structure such as a mountain chain is in isostatic equilibrium is to use the free air anomaly. If a structure is totally compensated, away from the edges of the structure the free air anomaly will be very small. Near the edges is difficult to discern. If the structure is only partially compensated, the or not at all, then the free air anomaly will be strongly positive, up to several hundred millgals, while the Bouguer anomaly will be about zero. Free air anomalies are always almost isostatic anomalies. They do not tell you what type of compensation is ocurring (ie, Pratt versus Airy), but if compensation of any mechanism is complete, then the free air anomaly will be nearly zero.
+  \end{tcolorbox}
+
 
 
 \section{Some general questions to reflect on}
@@ -261,5 +317,17 @@ In the specific model applied individual prisms are defined with their widths in
     colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
   For a mass deficit the gravitational vectors will point away from the anomaly. Therefore the corresponding equipotential lines is curved downwards. The opposite holds for a mass excess. I didn't figure out how to draw that yet in tikz.
   \end{tcolorbox}
-
+  \textbf{4. Why do we have Earth \& Ocean tides? To understand the principle focus on the Moon's effect only.}
+  \ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+      colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+    It comes down to two important effects: (1) The gravitational attraction of the moon towards the Earth is strong on the near-side than on the far side due to the $r^{-2}$ dependence. This alone leads to an ellipsoidal deformation. (2) The centrifugal acceleration due to the rotation around the center of mass between Earth and Moon counterbalances this to a certain extent. The formation of tidal bulges on either side of the Earth relative to the moon can be derived by decomposing the centrifugal acceleration into a radial component and a component that is perpendicular to the rotation axis. This leads to the lunar differential gravitational field that explains tidal bulges at both sides leading to semi-diurnal tides. The sun complicates this further but does not introduce different geophysical concepts. A detailed explanation can be found in Matsuda et al. 2015 (provided on Ilias).
+    \end{tcolorbox}
+    \textbf{5. Discuss whether the sun or the moon is more important for tides.}
+    \ifanswers
+      \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+        colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+        The sun is much larger and has a larger potential for tidal forces, however, it is also further away. The moon on the other hand has less weight but is closer. Doing the math shows that the sun accounts for about 40\% of the tidal forces on Earth.
+      \end{tcolorbox}
+      \textbf{6. Discuss the Airy and Pratt hypothesis. }
 \end{document}

@@ -1,12 +1,11 @@
 \begin{frame}
-  \begin{PointThree}{Learning Goals}
+  \begin{PointSix}{Learning Goals}
     \alert{Learning goals today:}
     \begin{itemize}
       \item The gravitational force, its potential field, and how to measure it.
-      \item The gravitational field of the Earth.
-      \item ....
+      \item The reference gravitational field of the Earth.
     \end{itemize}
-  \end{PointThree}
+  \end{PointSix}
   \end{frame}
 
 \begin{frame}
@@ -653,7 +652,7 @@
 
 
 \begin{frame}
-\begin{PointSix}{Gravitational field of a rotating Earth}
+\begin{PointSix}{Gravitational field of a spherical Earth}
   \small The Earth's rotation minimizes gravitational acceleration at the equator. At the poles it does nothing.
   \begin{center}
   \includegraphics[width=0.6\textwidth]{Figures/Gravity/Exported/GravityFieldEarthRotation_Reversed.png}
@@ -665,7 +664,7 @@
 
 
 \begin{frame}
-\begin{PointSix}{Gravitational field of a rotating Earth}
+\begin{PointSix}{Gravitational field of a spherical Earth}
   \small Centripedal acceleration at P perpendicular to rotation axis parallel to O'-P:
 
   $$
@@ -685,9 +684,6 @@
     &\text{Angular Acceleration:}\, \vec{g}_r = \dot{\vec{v}}_r=\vec{\omega} \times \vec{\omega} \times \vec{R}\cos(\theta)\\
     \end{align*}
   }}
-  $$
-    \vec{g} = \vec{g}_{gravitation} - \vec{g}_{rot., proj.}
-  $$
 \end{PointSix}
 \end{frame}
 
@@ -726,38 +722,16 @@
       \only<2>
       {
         \begin{itemize}
-          \item Heights can be referenced to geoids or ellipsoids (common source of error).
-          \item The direction of $\vec{g}$ is perpendicular to the geoid, so the local normal does not point to the Earth's center.
+          \item 2 Geoid is a real-world equipotential line approximating sea level.
+          \item 2 It is referenced to the geometric ellipsoid.
+        \end{itemize}
+      }
+      \only<3>
+      {
+        \begin{itemize}
+          \item Upwarping of geoid indicates mass excess.
+          \item Downwarping of geoid indicates mass deficit.
         \end{itemize}
       }
   \end{PointSix}
   \end{frame}
-
-
-\begin{frame}
-\begin{PointSix}{The GEOID determined by GRACE}
-  \begin{center}
-    \animategraphics[loop,width=6cm]{10}{Figures/Gravity/Src/Grace/GRACE_globe_animation-}{0}{35}
-  \end{center}
-  \tiny [NASA/JPL/University of Texas Center for Space Research., Public domain, via Wikimedia Commons -- Show animation with Acrobat Viewer]
-\end{PointSix}
-\end{frame}
-
-
-
-% \begin{frame}{GIFs in Beamer}
-%   %\centering
-%   \animategraphics[loop,width=4cm]{10}{Figures/Gravity/Src/Grace/GRACE_globe_animation-}{1}{35}
-% \end{frame}
-
-% \begin{frame}
-%   \begin{PointSix}{Potential Fields}
-%     Potential for a point mass 6.
-%   \end{PointSix}
-%   \end{frame}
-
-%   \begin{frame}
-%     \begin{PointSix}{Potential Fields}
-%       Potential for a point mass 7.
-%     \end{PointSix}
-%     \end{frame}
