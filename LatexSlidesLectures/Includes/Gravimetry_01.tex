@@ -1,9 +1,11 @@
 \begin{frame}
   \begin{PointSix}{Learning Goals}
+    \small
     \alert{Learning goals today:}
     \begin{itemize}
-      \item The gravitational force, its potential field, and how to measure it.
-      \item The reference gravitational field of the Earth.
+      \item Understand that gravity methods map sub-surface density variability
+      \item Understand the gravitational force, its potential field, and one underlying measurement principle.
+      \item Understand the Earth's geoid and reference ellipsoid
     \end{itemize}
   \end{PointSix}
   \end{frame}
@@ -82,28 +84,46 @@
           \includegraphics[width=0.99\textwidth]{Figures/Gravity/Exported/MeasuringG_Westphal_Nature2021.png}
           \centering
           \tiny Westphal et al., Nature, 2021\\
-          \normalsize G is the worst known constant in physics. Why?
+          \small G is the worst known constant in physics. Why?
       \end{PointSix}
   \end{frame}
 
-\begin{frame}
-\begin{PointSix}{Example: Measuring acceleration}
-  \begin{minipage}[t]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figures/General/ScarySmiley_Kindpng.png}
-    \end{minipage}\begin{minipage}[]{0.7\textwidth}
-  \centering
-  \begin{align*}
-  &\vec{F} = m \vec{g} \\
-  &\vec{F} = G\frac{mM}{r^2}\hat{r} \\
-  &\rightarrow \vec{g} = G\frac{M}{r^2}\hat{r} \\
-  &\rightarrow \frac{d^2\vec{x}}{dt^2} = G\frac{M}{r^2}\hat{r} \\
-  \end{align*}
-\end{minipage}
-  \centering
-  This is a differential equation.
+  \begin{frame}
+    \begin{PointSix}{Example: Measuring acceleration}
+      \begin{minipage}[t]{0.3\textwidth}
+       % \includegraphics[width=\textwidth]{Figures/General/ScarySmiley_Kindpng.png}
+        \end{minipage}\begin{minipage}[]{0.7\textwidth}
+      \centering
+      \begin{align*}
+      &\vec{F} = m \vec{g} \\
+      &\vec{F} = G\frac{mM}{r^2}\hat{r} \\
+    %  &\rightarrow \vec{g} = G\frac{M}{r^2}\hat{r} \\
+    %  &\rightarrow \frac{d^2\vec{x}}{dt^2} = G\frac{M}{r^2}\hat{r} \\
+      \end{align*}
+      \end{minipage}
+      \centering
+   %   \small  This is a differential equation.
+    \end{PointSix}
+    \end{frame}
 
-\end{PointSix}
-\end{frame}
+
+\begin{frame}
+  \begin{PointSix}{Example: Measuring acceleration}
+    \begin{minipage}[t]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{Figures/General/ScarySmiley_Kindpng.png}
+      \end{minipage}\begin{minipage}[]{0.7\textwidth}
+    \centering
+    \begin{align*}
+    &\vec{F} = m \vec{g} \\
+    &\vec{F} = G\frac{mM}{r^2}\hat{r} \\
+    &\rightarrow \vec{g} = G\frac{M}{r^2}\hat{r} \\
+    &\rightarrow \frac{d^2\vec{x}}{dt^2} = G\frac{M}{r^2}\hat{r} \\
+    \end{align*}
+    \end{minipage}
+    \centering
+    \small  This is a differential equation.
+  \end{PointSix}
+  \end{frame}
 
 \begin{frame}
 \begin{PointSix}{Example: Measuring acceleration}
@@ -116,7 +136,8 @@
   \end{align*}
 \end{minipage}
  % \centering
-  At the Earth's surface ($R_E$) g is close to constant and only vertical. (Later we will see that none of this is not quite true).
+ \small
+  At the Earth's surface ($R_E$) g is close to constant and only vertical. (Later we will see that none of this is quite true).
 
 \end{PointSix}
 \end{frame}
@@ -190,6 +211,7 @@
      \begin{align*}
        & x(t) = \frac{GM}{2R_e^2}t^2+c_1t+c_2 \\
      \end{align*}
+     \small
      \begin{itemize}
       \item Setting, e.g., $c1=0$ (initial velocity) and $c_2=0$ (initial position) is quite convenient.
       \item This is the principal of a free-fall gravimeter.
@@ -200,6 +222,7 @@
 
 \begin{frame}
 \begin{PointSix}{Exercises: Group-Work Thursdays}
+  \small
   \begin{itemize}
     \item Thanks to the Greeks we know the radius $R_E$ for the Earth. However, its mass was unknown for a while.
     \item Go ahead and determine the mass of the Earth M with your Smartphone!
@@ -406,6 +429,7 @@
 
 \begin{frame}
 \begin{PointSix}{Newton's Shell Theorem}
+\small
  \begin{itemize}
     \item The field outside a shell is the same as the one from an equivalent point mass
     \item The field inside a shell is zero. Everywhere.
@@ -695,14 +719,14 @@
 \end{PointSix}
 \end{frame}
 
-\begin{frame}
-\begin{PointSix}{Potential Fields}
-  \begin{itemize}
-    \item Rotation induces ellipsoidal shape approximate with reference ellipsoid.
-    \item Latitudinal correction of gravitation is adjusted accordingly.
-  \end{itemize}
-\end{PointSix}
-\end{frame}
+% \begin{frame}
+% \begin{PointSix}{Potential Fields}
+%   \begin{itemize}
+%     \item Rotation induces ellipsoidal shape approximate with reference ellipsoid.
+%     \item Latitudinal correction of gravitation is adjusted accordingly.
+%   \end{itemize}
+% \end{PointSix}
+% \end{frame}
 
 
 \begin{frame}
@@ -722,8 +746,8 @@
       \only<2>
       {
         \begin{itemize}
-          \item 2 Geoid is a real-world equipotential line approximating sea level.
-          \item 2 It is referenced to the geometric ellipsoid.
+          \item The reference of elevation is a constant source of confusion.
+          \item The geoid defines the local vertical direction.
         \end{itemize}
       }
       \only<3>
@@ -735,3 +759,16 @@
       }
   \end{PointSix}
   \end{frame}
+
+
+  \begin{frame}
+    \begin{PointSix}{Learning Goals}
+      \small
+      \alert{Learning goals today:}
+      \begin{itemize}
+        \item Understand that gravity methods map sub-surface density variability
+        \item Understand the gravitational force, its potential field, and one underlying measurement principle.
+        \item Understand the Earth's geoid and reference ellipsoid
+      \end{itemize}
+    \end{PointSix}
+    \end{frame}
