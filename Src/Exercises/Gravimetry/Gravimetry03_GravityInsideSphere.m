@@ -17,8 +17,8 @@ LinearDensity = (rho_crust-rho_core)/R*(l-R)+rho_crust;
 %% PREM Density
 PREM = dlmread('PREM.txt',' ',4,0);
 PREM_Depth = PREM(:,2)*1000;PREM_Density = PREM(:,5)*100^3/1000;PREM_dz = (PREM(2,2)-PREM(3,2))*1000;
-[PREM_Depth,ia,ic] = unique(PREM_Depth);PREM_Density=PREM_Density(ia);PREM_Depth(1)=1e-3;
-
+[PREM_Depth,ia,ic] = unique(PREM_Depth);PREM_Density=PREM_Density(ia);PREM_Depth(1)=1e-3;out = [PREM_Depth PREM_Density];
+save('PREM_DepthDensity.txt','out','-ASCII');
 %% Get the corresponding gs
 gConstantDensity = G_SI*rho_mean*4.0/3.0*pi*l;
 gLinearDensity = 4*pi*G_SI*((rho_crust-rho_core)/(4*R)*l.^2+1.0/3.0*rho_core*l);
