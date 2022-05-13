@@ -1,0 +1,48 @@
+\subsection{The magnetic dipole field}
+\label{Sec:DipoleField}
+Derive the two-dimensional dipole field $\vec{B}$ and its magnitude $|\vec{B}|$ from the potential field using:
+\begin{align*}
+    \vec{B} & = -\nabla A \\
+       &\approx -\nabla \frac{|\vec{m}|\cos(\theta)}{r^2}
+\end{align*}
+and show that 
+$$
+    |B| = \frac{|\vec{m}|}{r^3}\sqrt{\left(3\cos^2(\theta) + 1\right)}
+$$. 
+Also show that: 
+$$
+    \nabla \cdot \vec{B} = 0.
+$$
+Discuss what this means in terms of the magnetic dipole field. Be aware that the gradient $\nabla$ and that the divergence $\nabla \cdot$ have a specific form in polar coordinates which you should look up. No need to memorize the specific form of these operators in different coordinate systems, but remember that they differ from coordinate system to coordinate system.
+
+
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+    We use the $\nabla$ operator in spherical coordinates:
+    $$
+        \nabla = \hat{r}\frac{\partial}{\partial r} + \hat{\theta} \frac{1}{r}\frac{\partial}{\partial \theta}
+    $$
+    The derivation with respect to $r$ is:
+    $$ 
+        \hat{r}\frac{\partial}{\partial r} \left(\frac{|\vec{m}|\cos(\theta)}{r^2}\right) = -2\frac{|\vec{m}|\cos(\theta)}{r^3}\hat{r}
+    $$
+    The derivation with respect to $\theta$ is:
+    $$
+    \hat{\theta} \frac{1}{r}\frac{\partial}{\partial \theta}\left(\frac{|\vec{m}|\cos(\theta)}{r^2}\right) = \frac{|\vec{m}|\sin(\theta)}{r^3}\hat{\theta}
+    $$
+    Taken together:
+    $$
+        \vec{B} = \frac{|\vec{m}|}{r^3}\left(2\cos(\theta)\hat{r} + \sin(\theta)\hat{\theta} \right)
+    $$
+    The norm of $|\vec{B}| = \sqrt{B_r^2 + B_{\theta}}$ as the unit vectors $\hat{r}$ and $\hat{\theta}$ are orthonormal. It is similar to a cartesian coordinate system but rotated.
+    \begin{align*}
+        &B_r^2 = \left(\frac{|\vec{m}|}{r^3}2\cos(\theta)\right)^2 \\ 
+        &B_{\theta}^2 = \left(\frac{|\vec{m}|}{r^3} \sin(\theta) \right)^2 \\
+        &B_r^2+ B_{\theta}^2 = \frac{|\vec{m}|^2}{r^6}\left(4\cos^2(\theta) + \sin^2(\theta)\right) \\
+        &B_r^2+ B_{\theta}^2 = \frac{|\vec{m}|^2}{r^6}\left(3\cos^2(\theta) + 1\right) \\ 
+        &\sqrt{B_r^2+ B_{\theta}^2} = \frac{|\vec{m}|}{r^3}\sqrt{\left(3\cos^2(\theta) + 1\right)} \\
+    \end{align*}
+    For the divergence we use $\nabla \cdot \vec{B} = \frac{1}{r^2}\frac{\partial}{\partial r}\left( \right)$
+    \end{tcolorbox}
+\fi

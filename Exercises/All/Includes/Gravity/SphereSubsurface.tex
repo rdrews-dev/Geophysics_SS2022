@@ -1,7 +1,7 @@
 \subsection{Detection of a spherical object in the sub-surface}
 \label{Sec:SphereInSubsurface}
 \begin{enumerate}[label=(\alph*)]
-  \item Consider a spherical object with radius $R$ located at depth $z$ below the surface, and a gravimeter that is moved along the surface across the anomaly (Fig.\ref{Fig:SphereInSubsurface}). Derive an analytical expression for the expected \textit{vertical} anomaly $g_z$ as a function of the lateral distance $x$ and depth $z$. Calculate the maximum anomalies that you would expect for some realistic settings (e.g., a limestone cave.)
+  \item Consider a spherical object with radius $R$ located at depth $z$ below the surface, and a gravimeter that is moved along the surface across the anomaly (Fig.\ref{Fig:SphereInSubsurface}). Derive an analytical expression for the expected \textit{vertical} anomaly $g_z$ as a function of the lateral distance $x$ and depth $z$. Calculate the maximum anomalies that you would expect for some realistic settings (e.g., a limestone cave). Only consider the anomaly relative to a reference point far away from the target and not the total gravitational field.
 
   \item Use a piece of paper or a software of your choice (e.g., Excel, SciDAVis, Matlab, Python) and visualize the expected vertical gravity anomaly for a specific setting as a function of lateral distance $x$. Show how this profile changes as you vary the depth of the object. 
 
@@ -63,8 +63,10 @@
 \begin{eqnarray*}
 g_z &=\frac{1}{2}g_{z,max} \\
 \rightarrow \frac{z}{(x^2_{1/2}+z^2)^\frac{3}{2}} &= \frac{1}{2z^2}\\
-\rightarrow \frac{z^3}{(x_{\frac{1}{2}}+z^2)^\frac{3}{2}}&= \frac{1}{2}\\
-\rightarrow \frac{1}{(\frac{x_{\frac{1}{2}}}{z^2}+1)^\frac{3}{2}}&= \frac{1}{2}\\
+\rightarrow \frac{z^3}{(x^2_{\frac{1}{2}}+z^2)^\frac{3}{2}}&= \frac{1}{2}\\
+\rightarrow \frac{z^2}{(x^2_{\frac{1}{2}}+z^2)}&= \frac{1}{2^{2/3}}\\
+\rightarrow \frac{1}{(\frac{x^2_{\frac{1}{2}}}{z^2}+1)}&= \frac{1}{2^{2/3}}\\
+\rightarrow 1 = \frac{1}{2^{2/3}} (\frac{x^2}{z^2}+1)\\
 \rightarrow z = \frac{x_{1/2}}{\sqrt{2^{\frac{2}{3}}-1}}\approx 1.305 x_{1/2}
 \end{eqnarray*}
 Those expressions can be useful to estimate the depth of an object from an observed anomaly without using a full forward model. However, this only works if the object is close to spherical (which we usually don't know necessarily ahead of time.) Similar estimates exists for other shapes (e.g., horizontal and vertical cylinders).

@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inzane Syllabus Template
+% LaTeX Template
+% Version 1.2 (8.22.2019)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Zane Wolf (zwolf.mlxvi@gmail.com)
+%
+% I (Zane) have left a lot of instructions both in the .tex file and the .cls file that can guide you to customize this document to suite your tastes and requirements. Here is a brief guide: 
+%  - Changing the Main Color: .cls line 39
+%  - Adding more FAQs: .cls line 126 and .tex line 99
+%  - Adding TA emails: uncomment .cls lines 220 & 224 and .tex lines 85 and 89
+%  - Deleting the FAQ sidebar entirely: .tex line 188
+%  - Removing the Lab/TA Info and placing a brief Overview/About section in their place:        uncomment .tex line 91 and .cls line 227, and comment .cls lines for the LAB/TA info        that you no longer want (c. lines 184-227)
+
+%
+% I am also happy to help with crafting/designing modifications to this template to help suite your personal needs in a syllabus. Feel free to reach out! 
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{inzane_syllabus} % a4paper for A4
+
+\usepackage{booktabs, colortbl, xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ltablex} 
+\usepackage{multirow}
+\setlist{nolistsep}
+
+\usepackage{lscape}
+\newcolumntype{r}{>{\hsize=0.9\hsize}X}
+\newcolumntype{w}{>{\hsize=0.6\hsize}X}
+\newcolumntype{m}{>{\hsize=.9\hsize}X}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{2.0}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\profilepic{TAE_1593_cropped3} % Profile picture, if the height of the picture is less than that of the circle, it will have a flat bottom. 
+
+
+% To remove any of the following, you need to comment/delete the lines in the .cls file (c. line 186). Commenting/deleting the lines below will produce an error. 
+
+%To add different lines, you will need to create the new command, e.g. \profPhone, in the .cls file c. line 76, and command to create the line in the side bar in the .cls file c. line 186
+
+\classname{Report Writing} 
+\classnum{Some basic guidelines} 
+
+%%%%%%%%%%%%%%% PROF INFO
+\profname{Reinhard Drews}
+\officehours{Office Hrs: on demand.} 
+\office{GUZ 3U37}
+\site{\MYhref{https://uni-tuebingen.de/de/147603}{Website}} 
+\email{reinhard.drews@uni-tuebingen.de}
+
+%%%%%%%%%%%%%%% COURSE  INFO
+\prereq{Prereq: None}
+\classdays{Tues \& Thurs}
+\classhours{16:15-18.00}
+\classloc{Online}
+
+%%%%%%%%%%%%%%% LAB INFO
+\labdays{In sub-groups of 6}
+\labhours{Three exercises with individual timing for groups. It will be one afternoon of field work per exercise.}
+\labloc{Outside.}
+
+%%%%%%%%%%%%%%% TA INFO
+\taAname{Prof. P. Dietrich}
+\taAofficehours{Office Hrs: On demand}
+\taAoffice{UFZ, Leipzig}
+%\taAemail{peter.dietrich@ufz.de}
+\taBname{R. Ershadi}
+\taBofficehours{Office Hrs: On demand.}
+\taBoffice{GUZ Level 3}
+%\taBemail{mohammadreza.ershadi@uni-tuebingen.de}
+
+% \about{Fish make up the largest group of vertebrates on the planet, easily outnumbering mammals, marsupials, birds, and reptiles combined. Not only are they abundant, but they've diversified into an extraordinary array of sizes, shapes, lifestyles, and habitats. You can find them in the coldest, deepest parts of the ocean, and in the hottest freshwater ponds in the desert. This course will explore fish diversity and their biology. } 
+
+
+%---------------------------------------------------------------------------------------
+%	 FAQs
+%----------------------------------------------------------------------------------------
+%to add more questions or remove this section, go to the .cls file and start with lines comment
+%lines 226-250. Also comment out this section as well as line 152(ish), the command \makeSide
+
+\qOne{Is this course hard?}
+\aOne{Not sure, I am teaching it for the first time. Rumor has it that 'yes'. All of you took quite difficult math classes and we will use these, e.g., including differentiation, integration, some linear algebra (e.g. vector fields). We will also brush on computational techniques. Exam relevant content will stick to a BSc level, but hopefully you will also be prepared for higher MSc courses. }
+
+\qTwo{How to pass the exam?}
+\aTwo{Maybe don't google every question during the term. Other than that may the force be with you.}
+
+\qThree{Why do I have to suffer through this?}
+\aThree{Even if you don't like geophysics you will learn a mathematical \& quantitative approach that people find useful later on. Because we know you don't trust us we made this course mandatory.}
+
+\qFour{Can I call myself a geophysicist after this course ?}
+\aFour{Definitely go for it. This is not a protected term. I say this as your career-coach.}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 DESCRIPTION
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 OVERVIEW
+%----------------------------------------------------------------------------------------
+Every group will submit one report for the three applied exercises in magnetics, geoelectrics, and seismics. Writing good reports is difficult. On the one hand you want that the reader can follow every step and is never caught by surprise (which is fundamentally different from fictional writing). On the other hand you have to be concise and outsource non-relevant information. Finding the correct balance for a wide range of readers can take years of practice. 
+
+
+This document outlines some of the expectations that your report should fulfill including (1) a concise and logical structure \& layout, (2) clear take-away messages, and (3) reproducibility of the survey and related inferences.\\
+
+\section{Structure \& Layout}
+
+Structuring your report is important, as it enables the reader to quickly zoom in on subsections of specific interests: An experienced geophysicists may skip the methods and focus exclusively on the results. Your client (who knows nothing about geophysics and hence hired you) may desperately look for the one take-away message and skip all the rest. It is nerve-racking to find the relevant information in a long, narrative and unstructured report. 
+
+A classic structure contains the following five subsections: 
+\begin{itemize} 
+\setlength\itemsep{1.2em}
+\item \textit{Introduction:} Lay out the goal of this report (e.g., phrased as a question) and provide general context required for the reader to understand the following sections. Often this includes a figure of the survey area.
+\item \textit{Methods:} State the core geophysical principles, the instruments used, related uncertainties and processing strategies. Outline the expectations based on the geophysical theory and available site information.
+\item \textit{Results:} Exclusively summarize the findings of the survey including informative figures. This section can be comparatively short as all interpretation is held back at this stage and only appears in the discussions.
+\item \textit{Discussions:} Balance different scenarios explaining your results. Often the results are unambiguous (e.g, a magnetic anomaly curve), but related interpretations (e.g., the magnetic anomaly is caused by an object at a specific depth) differ from operator to operator. Contrast your results to your expectations outlined previously. Celebrate differences, don't try to oversimplify.
+\item \textit{Conclusions:} Reiterate the original motivation from the introduction and then provide take-away messages that are synthesized from the results and related discussions. This is often the most-read section.
+\end{itemize} 
+Make sure that the layout of the report is formally correct which includes (but is not limited to) readable labels on figures and adequate internal and external referencing. Sloppy figures and a poor design invoke an unprofessional impression biasing your reader towards questioning the results.\\
+
+
+\section{Take-away messages}
+
+From reading your report a number of take-away messages should crystallize that differentiate important findings from arguably less important details. Those are typically the one to three things that a reader would still remember a few weeks after reading the report.\\
+
+
+\section{Reproducibility}
+
+Your report should enable the reader to cross check your data and findings if required. This, for example, 7 includes provision of the raw data so that the processing schemes mentioned in the \textit{Methods} can be repeated. It also includes location and timing of the measurements and any other additional information required to repeat the survey. Some of this information (e.g., data tables) can be attached to the main report in form of an \textit{Appendix}. 
+
+
+
+\end{document} 
+
+
+

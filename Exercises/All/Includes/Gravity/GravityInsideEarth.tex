@@ -29,12 +29,12 @@ Knowing the gravitational acceleration \textit{inside} the Earth is important, e
     where $M$ is mass contained in the sphere with radius $l$. How does $M$ change as we change $l$? In this spherical symetry it is best to adopt spherical coordinates so that we can write: 
     \begin{eqnarray}
     M &=& \int \rho dV \\ 
-    &=& \int_0^{\frac{\pi}{2}} d\theta \sin(\theta) \int_0^{2\pi}  d\phi \int_0^l dl\,\rho\,l^2 dV
+    &=& \int_0^{\pi} d\theta \sin(\theta) \int_0^{2\pi}  d\phi \int_0^l dl\,\rho\,l^2 dV
     \end{eqnarray}
     this is a fairly complicated way of writing something that you know by heart (i.e. the density times the volume of a sphere), but this is a good oppertunity to make use of spherical coordinates. Most importantly, it is worthwhile to remember that the volume element $dV = l^2 \sin(\theta)drd\theta d\phi$ is quite different from the cartesian coordinates that you are used to otherwise. Also take a moment and understand why the integration limits are the way they are. Solving the integral step by step for the case of a constant density:
     \begin{eqnarray}
-        M &=& \rho \int_0^{\frac{\pi}{2}} d\theta \sin(\theta)\int_0^{2\pi}  d\phi \int_0^l l^2 dl \\
-         &=&\rho 2\pi \int_0^{\frac{\pi}{2}} d\theta \sin(\theta)\int_0^l l^2dl\\
+        M &=& \rho \int_0^{\pi} d\theta \sin(\theta)\int_0^{2\pi}  d\phi \int_0^l l^2 dl \\
+         &=&\rho 2\pi \int_0^{\pi} d\theta \sin(\theta)\int_0^l l^2dl\\
          &=&\rho 4\pi \int_0^l l^2dl \\ 
          &=&\rho \frac{4}{3}\pi l^3
     \end{eqnarray}

@@ -13,7 +13,7 @@ which simplifies slightly to:
 $$
  g_z(r) = G\int \frac{1}{r^2} \cos(\phi)\rho(r) dV = G\int \frac{z}{r^3} \rho(r) dV
 $$
-because often only the vertical component is of interest (Ex. cf. \ref{Sec:SphereInSubsurface}).
+because often only the vertical component is of interest (same as in Ex 1.1).
 However, the problem remains complicated as the integration bounds depend on the object's geometry and the integral needs to be solved for every $r$ along the gravimetry profile. Some solutions for special shapes you already know (e.g.sphere, bouger plate). Here we use the solution for a rectangular prism which fortunately others have already calculated for us (\textit{Naggy 1966, Geophysics VOL. XXX, SO. 2}). Using this solution, we can build up more complicated shapes out of individual prisms.
 
 In the specific model applied individual prisms are defined with their widths in the horizontal (wx, wy) and the vertical (wz), together with the positions in the subsurface. The key is that the position coordinates (dx1, dx2, dy1, dy2, dz1, dz2) need to be prescribed relative to the measurement position which changes along the profile. The expected anomaly is then calculated based on the analytical solution.
@@ -25,8 +25,10 @@ In the specific model applied individual prisms are defined with their widths in
 
   \item Switch to case 3. This one treats the individual effects of two prisms meaning that it doesn't sum them up. This one will not run until you fill out the parts marked with XXX. Use this case to illustrate that multiple situations in the sub-surface (e.g. a shallow prism with low density contrast vs. a lower prism with larger density contrast) can result in similar anomalies. This is an important finding. Forward models are often not unique, and therefore your interpretation won't be either. This situation occurs in many geophysical situations. Remember that.
 \end{enumerate}
+\ifanswers
 \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
   colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
   watermark color=white]
   \lstinputlisting[language=matlab]{../../Src/Gravimetry/PrismForwardModel/GravForwardModelPrismRD.m}
 \end{tcolorbox}
+\fi

@@ -1,0 +1,57 @@
+\subsection{General Questions}
+\label{Sec:MagGeneralQuestions}
+
+\begin{enumerate}[label=(\alph*)]
+    \item In magnetic surveys often the vertical gradient is determined by measuring with two sensors installed at different heights let's say 0.5 meters apart. Develop an argument (including drawings or results from forward modeling) why this type of survey emphasizes near-surface targets.
+    \item Compare the gravity method with the magnetic method using the table below. 
+\end{enumerate}
+
+\begin{tabularx}{\textwidth}{X|X X}
+    \centering
+%  \begin{tabular}{l{3cm}|c c}
+     & Gravity Method & Magnetic Method \\
+ \hline
+ active or passive &  &   \\ \specialrule{0.5pt}{10pt}{1pt}
+ geophysical parameter &   &   \\ \specialrule{0.5pt}{1pt}{1pt}
+ potential field  & & \\ \specialrule{0.5pt}{1pt}{1pt}
+ time variability of earth's field &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ typical data processing &  &   \\ \specialrule{0.5pt}{1pt}{1pt}
+ basic source types &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ field characteristics &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ force characterisitcs &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ sensors &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ use of reference station &  &  \\ \specialrule{0.5pt}{1pt}{1pt}
+ applications & &    %  \end{tabular}
+%  \caption{Blabla}
+%  \label{tab:1}
+\end{tabularx}
+
+\ifanswers
+\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+\textbf{(a)} In general, the deeper the magnetic source, the broader and gentler the gradients of the resulting anomaly will be (see forward modeling). Also, in general, the shallower the magnetic object, the sharper and narrower the resulting anomaly. The gradient picks this rapid changes up an amplifies them.
+
+\textbf{(b)}
+
+
+    \begin{tabularx}{\textwidth}{X|X X}
+        \centering
+    %  \begin{tabular}{l{3cm}|c c}
+            & Gravity Method & Magnetic Method \\
+        \hline
+        active or passive & passive & passive  \\ \specialrule{0.5pt}{1pt}{1pt}
+        geophysical parameter & density ($\rho$) & magnetic susceptibility ($\chi$)  \\ \specialrule{0.5pt}{1pt}{1pt}
+        potential field  & $\vec{g}=-\nabla \phi$ & $\vec{B}=-\nabla A$ \\ \specialrule{0.5pt}{1pt}{1pt}
+        time variability of earth's field & slow \& small (e.g. tides) & strong \& fast (e.g., space weather) \\ \specialrule{0.5pt}{1pt}{1pt}
+        typical data processing & latitudinal, elevation, terrain, bouger corrections &  interpretation in terms of ambient field, gradiometry \\ \specialrule{0.5pt}{1pt}{1pt}
+        basic source types & point mass & magnetic dipole from current loop \\ \specialrule{0.5pt}{1pt}{1pt}
+        field characteristics & spherically symmetric, $1/r^2$ decay & dipole field, closed field lines, $1/r^2$ decay for monopole, $1/r^3$ for dipoles \\ \specialrule{0.5pt}{1pt}{1pt}
+        force characterisitcs & attractive & attractive or repulsive \\ \specialrule{0.5pt}{1pt}{1pt}
+        sensors & springs, free-fall, pendulum & proton precession $T$, fluxgate $\vec{B}$, optically pumped \\ \specialrule{0.5pt}{1pt}{1pt}
+        use of reference station & yes, mostly due to sensor drift & yes, due to secular variability \\ \specialrule{0.5pt}{1pt}{1pt}
+        applications & ice-sheet mass balance, groundwater variability, sediment infill valley,..& mid-ocean ridges, pipes, paleochronology, tectonics   %  \end{tabular}
+    %  \caption{Blabla}
+    %  \label{tab:1}
+    \end{tabularx}
+\end{tcolorbox}
+\fi

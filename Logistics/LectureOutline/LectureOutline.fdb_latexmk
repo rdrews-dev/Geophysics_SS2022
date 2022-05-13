@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649429715 "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.tex" "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.pdf" "LectureOutline" 1649429716
-  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.aux" 1649429716 964 697f979e50ecf9866609788e971a1e92 ""
-  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.tex" 1649429715 17291 58c7a2c3657b3c7ae272536f3521d640 ""
+["pdflatex"] 1652279093 "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.tex" "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.pdf" "LectureOutline" 1652279094
+  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.aux" 1652279094 964 697f979e50ecf9866609788e971a1e92 ""
+  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.tex" 1652279092 17429 54666e235b91db85825bfb85a7d72356 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/clearsans/clr_er7w2x.enc" 1480098666 2877 6ddb27cbef539831b4076105c848e789 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/clearsans/clr_nrghxx.enc" 1480098666 3292 7ca76312f7979eecb918259ad695c8a8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc" 1480098667 1687 f004baecce60175c6453d0e3f808cf20 ""
@@ -182,15 +182,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1540618190 4220281 4571224e29bf07ecaa48b110ba86e5a7 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "LectureOutline.aux" 1649429716 964 697f979e50ecf9866609788e971a1e92 ""
-  "LectureOutline.out" 1649429716 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "LectureOutline.tex" 1649429715 17291 58c7a2c3657b3c7ae272536f3521d640 ""
+  "LectureOutline.aux" 1652279094 964 697f979e50ecf9866609788e971a1e92 ""
+  "LectureOutline.out" 1652279093 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "LectureOutline.tex" 1652279092 17429 54666e235b91db85825bfb85a7d72356 ""
   "TAE_1593_cropped3.jpg" 1618400966 174856 5f747ee73affd6ce85f44109e1691457 ""
   "inzane_syllabus.cls" 1618400966 14820 cb755719e89577963788f519b6703ccb ""
   (generated)
-  "LectureOutline.out"
-  "LectureOutline.log"
-  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.log"
   "LectureOutline.aux"
-  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.pdf"
   "LectureOutline.pdf"
+  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.log"
+  "LectureOutline.log"
+  "/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Logistics/LectureOutline/LectureOutline.pdf"
+  "LectureOutline.out"

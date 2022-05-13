@@ -76,6 +76,32 @@
     \end{itemize}
   \end{PointSix}
 \end{frame}
+
+\begin{frame}
+  \begin{PointSix}{Gravimeters}
+    \includegraphics[width=0.95\textwidth]{Figures/Gravity/Exported/AbsolutGravimeter_EOS2017.png}
+
+    \tiny [EOS, 2017]
+  \end{PointSix}
+\end{frame}
+
+\begin{frame}
+  \begin{PointSix}{Gravimeters}
+    \includegraphics[width=0.75\textwidth]{Figures/Gravity/Exported/Gravimeter_Sandeep_CC_BY_SA.png}
+
+    \tiny [Sandeep (CC-BY-SA)]
+  \end{PointSix}
+\end{frame}
+
+
+\begin{frame}
+  \begin{PointSix}{Gravimeters}
+    \includegraphics[width=0.95\textwidth]{Figures/Gravity/Exported/GravimetryNoHide_RoyalObsVanCamp2017.png}
+
+    \tiny [Royal Observatory Belgium, Van Camp 2017]
+  \end{PointSix}
+\end{frame}
+
 \begin{frame}
     \begin{PointSix}{Instrument drift / temporal variability}
       \resizebox{9 cm}{!}{     
@@ -610,10 +636,19 @@
         \item Tidal forces vary across a spatially extended body.
         \item Tidal forces are balanced by centrifugal forces of two (three) body rotations.
         \item There is lots of confusion regarding the origin of tides (cf. Matsuda et al. 2015 $\rightarrow$ Ilias).
-        \item \color{MyBlue}{Tide models can be used for correction} 
+        \item \color{MyBlue}{Tide models or reference measurements can be used for correction} 
       \end{itemize}
   \end{PointSix}
 \end{frame}
+
+\begin{frame}
+  \begin{PointSix}{Tidal signal in gravimetry}
+    \includegraphics[width=0.95\textwidth]{Figures/Gravity/Exported/TidalEffects_MiddlemissNature2016.png}
+
+    \tiny [Middlemiss et al., Nature, 2016]
+  \end{PointSix}
+\end{frame}
+
 
 \begin{frame}
   \begin{PointSix}{Reduction of gravity data}
@@ -632,15 +667,51 @@
 
 \begin{frame}
   \begin{PointSix}{Reduction of gravity data}
-    Every gravity survey measures:
+    \begin{align*}
+        \delta g_{z, reported} = &\delta g_{z, measured} \\
+        &\pm \delta g_{z, lat}   \\
+        &\pm \delta g_{z, elev}  \\
+        &\pm \delta g_{z, tides}  \\
+        &\pm \delta g_{z,terrain} \\ 
+        &- \delta g_{z,bouger}  
+  \end{align*}
+  \end{PointSix}
+\end{frame}
+
+
+\begin{frame}
+  \begin{PointSix}{Reduction of gravity data}
+    \begin{align*}
+        \delta g_{z, reported} = &\delta g_{z, measured} \\
+        &\pm \delta g_{z, lat}   \\
+        &\pm \delta g_{z, elev}  \\
+        &\pm \delta g_{z, tides}  \\
+        &\pm \delta g_{z,terrain} \\ 
+        &- \delta g_{z,bouger} 
+  \end{align*}
+
+  \small free-air: $\delta g_{z, lat} \pm g_{z, elev} (\pm  g_{z,terrain} \pm g_{z, tides})$\\
+  
+  \small bouger: free-air + bouger plate (rel. sea level)
+
+
+  \end{PointSix}
+\end{frame}
+
+
+\begin{frame}
+  \begin{PointSix}{Example: Global variability}
+      \includegraphics[width=0.99\textwidth]{Figures/Gravity/Exported/Grace_JPLCaltect_FODT10_WithoutPeople.png}
+  \end{PointSix}
+\end{frame}
+
+\begin{frame}
+  \begin{PointSix}{Learning Goals}
+    \alert{Learning goals today:}
     \begin{itemize}
-      \item \textcolor{MyBlue}{latitudinal variability},
-      \item \textcolor{MyBlue}{dependency on elevation},
-      \item \textcolor{MyBlue}{the surrounding terrain},
-      \item \textcolor{MyBlue}{excess mass above anomaly},
-      \item \textcolor{MyBlue}{earth \& ocean tides},
-      \item \textcolor{MyBlue}{(instr. drift, motion compensation)},
-      \item \alert{density variability in the subsurface.}
+      \item Principles of gravimeters.
+      \item Gravity survey types (absolute \& relative) and general considerations of survey layouts and structure types.
+      \item Reduction of gravity data.
     \end{itemize}
   \end{PointSix}
 \end{frame}

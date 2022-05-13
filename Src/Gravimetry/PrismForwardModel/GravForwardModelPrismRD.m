@@ -13,7 +13,7 @@ close all;
 % Two Rectangles: 2;
 % Ambiguities: 3
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-CaseNumber = 1;
+CaseNumber = 3;
 
 switch CaseNumber
     case 1
@@ -50,16 +50,16 @@ switch CaseNumber
         fig = figure()
         subplot(3,1,1)
         plot(xp,dg)
-        ylabel('Gravity Anomaly (mGal)');box off;set(gcf, 'color', 'none');set(gca, 'color', 'none');
+        ylabel('Gravity Anomaly (mGal)');box off;
         subplot(3,1,2)%[x y w h]
         rectangle('Position',[-wx/2,offsetz,wx,wz]);
         set(gca,'XAxisLocation','top','YAxisLocation','left','ydir','reverse');
-        xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Depth (m)');ylim([0,2]);set(gcf, 'color', 'none');set(gca, 'color', 'none');
+        xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Depth (m)');ylim([0,2]);
         subplot(3,1,3)%[x y w h]
         rectangle('Position',[-wx/2,-wy/2,wx,wy]);
         xlim([min(xp),max(xp)]);xlabel('Horizontal Distance x (km)');ylabel('Horizontal Distance y (km)');
         %Export to a png. (This can be done much better.)
-        set(gcf, 'color', 'none');set(gca, 'color', 'none');
+        %set(gcf, 'color', 'none');set(gca, 'color', 'none');
         set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 10 20])
         set(findall(fig, '-property', 'FontSize'), 'FontSize', 12)
         print('-dpng','-r300','../../../LatexSlidesLectures/Figures/Gravity/Exported/ForwardModelPrism.png')

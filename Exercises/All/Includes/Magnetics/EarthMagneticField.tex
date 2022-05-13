@@ -1,0 +1,34 @@
+\subsection{The Earth's magnetic field}
+Use online resources and characterize the Earth's magnetic field in Tübingen in terms of (declination, inclination, horizontal component, total field strength etc.). Can you find information about temporal variability? How large is it and over which time frame? Visualize the time series. Post values and graphics in the forum.
+
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+        %\begin{figure}[h!]
+            \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=\linewidth, % Scale the plot to \linewidth
+                    grid=major, % Display a grid
+                    grid style={dashed,gray!30}, % Set the style
+                    ylabel=Total Intensity (nT), % Set the labels
+                    xlabel=Decimal Year,
+            %      x unit=none, % Set the respective units
+            %     y unit=none,
+            %     legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+            %     x tick label style={rotate=0,anchor=east} % Display labels sideways
+                ]
+                \addplot 
+                % add a plot from table; you select the columns by using the actual name in
+                % the .csv file (on top)
+                table[x=DecimalYear,y=Total,col sep=comma] {/Users/rdrews/Nextcloud/esd_teach/geophyscis_BSc_SoSe22/Exercises/All/Includes/Magnetics/data/igrfwmmData_nh.csv}; 
+                \legend{IGRF}
+                \end{axis}
+            \end{tikzpicture}
+        %    \caption{Total field variation as function of decimal year from 1969 to 2022 using the IGRF model.}
+            \end{center}
+        %\end{figure}
+        Declination Inclination Horizontal Intensity NorthComp East Comp Vertical Comp TotalField
+        3.2940 	64.4662 	20,937.4 nT 	20,902.8 nT 1,203.1 nT 	43,829.7 nT 	48,573.8 nT
+    \end{tcolorbox}
+    \fi

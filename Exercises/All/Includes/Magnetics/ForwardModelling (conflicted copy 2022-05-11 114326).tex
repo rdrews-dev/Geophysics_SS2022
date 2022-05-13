@@ -1,0 +1,29 @@
+\subsection{Forward Modelling of Magnetic Anomalies}
+\label{Sec:MagForwardModel}
+In order to improve our intuitive understanding of magnetic surveying we will employ some forward simulations using the GeoSci.xyz package which has been developed by a number of contributors (e.g., Lindsey Heagy) and is available for all to use. If you are somewhat computer affine, you can install the required packages locally on your computer as described on their GitHub page. Alternatively, we will use \textit{binder} where you can run the corresponding notebooks via a web-browser. 
+\vspace{0.25cm}
+
+Try clicking here: 
+
+\url{https://notebooks.gesis.org/binder/jupyter/user/geoscixyz-geosci-labs-j7mdlcx3/notebooks/notebooks/index.ipynb}
+
+or copy the web-address into your browser.
+\vspace{0.25cm}
+\begin{enumerate}[label=(\alph*)]
+    \item Navigate to the \textit{MagneticDipoleApplet.ipynb} which is the notebook that we already discussed in class. Use this model of a magnetic dipole in the surface to familiarize yourself with the expected magnetic anomalies at different locations in the world.
+    \item Navigate to the \textit{MagneticPrismApplet.ipynb}. First choose a small, symmetrical prism and make sure that the simulated results are similar to those obtained for a idealize dipole. Then start changing the geometry, e.g., approximating a pipeline in the subsurface. Can you come up with a somewhat realistic expectation for a case in Tübingen?
+    \item Navigate to the \textit{Mag\_Induced2D.ipynb}. This example contains some field data in a ASCII txt file (not collected by us) and shows one way how these data can be visualized. It then extends the MagneticPrismApplet by including the effects of a remanent magnetization. Investigate how a remanent magnetization superimposes with the induced magnetization. How many free parameters does this forward model have? Will there also be possibilities for non-uniquness as already seen in the Gravity exercises?
+\end{enumerate}
+
+\ifanswers
+\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions]
+    
+    Tübingen (Morgenstelle) is located at 48.537624 N 9.031300 E (342 m.a.s.l.). Using NOAA's magnetic field calculator (\url{https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml#igrfwmm}) we obtain a declination of D=3.3$^{\circ}$, inclination of  I=64.4$^{\circ}$ and T=48500 nT. The python notebooks are quite self-explanatory, not hard solutions provided here. Ambiguities clearly exists, as always.
+
+
+\end{tcolorbox}
+
+
+
+\fi
