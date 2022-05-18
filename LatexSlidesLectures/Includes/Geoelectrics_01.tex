@@ -396,30 +396,6 @@ injecting a steady current I. The current flows to a distributed sink at infinit
   \end{center}
   \end{PointSix}
 \end{frame}
-\begin{frame}
-  \begin{PointSix}{Current flow through the sub-surface}
-   % RESISTOR with battery and arrow
-   \begin{center}
-    \begin{tikzpicture}
-      \coordinate (A) at (8,0);
-      \coordinate (B) at (4,-0.5);
-      \coordinate (C) at (5,-3.5);
-      \coordinate (D) at (6,-3.5);
-      \draw [thick] (0,0.0) -- (8,0.0);
-      % drawing the node with shape=rectangle and anchor=center
-      %\node [draw, Karminrot, thick, shape=rectangle, minimum width=0.25cm, minimum height=0.25cm, anchor=center] at (B) {};
-      \draw [->, line width = 1mm] (4,0.5) -- (B) node[xshift=1.0cm,yshift=1.0cm,midway,left] {current $\vec{I}$};;
-  
-      \node[yshift=0.3cm] at (A) {\small Surface};
-  
-    \end{tikzpicture}
-    $$
-      \boxed{\vec{E} = -\frac{I\rho}{2\pi} \frac{1}{r^2}\hat{r}}
-    $$
-    \small
-  \end{center}
-  \end{PointSix}
-\end{frame}
 
 
 \begin{frame}{Current flow through the sub-surface}
@@ -434,39 +410,3 @@ injecting a steady current I. The current flows to a distributed sink at infinit
  \end{frame}
 
 
- \begin{frame}{Current flow through the sub-surface}
-  \begin{PointSix}{Current flow through the sub-surface}
-    \small
-    Consider a homogeneous conducting halfspace, with constant resistivity $\rho$, under an insulating medium. Let there be a point electrode at the surface
-injecting a steady current I. The current flows to a distributed \alert{sink nearby}. Find the electrostatic potential, the electric field, and consequently the pattern of current flow in the sub-surface.
-
-    [cf. Telford Chapter 8, online resources resistivity 1 and resistivity 2.]
-  \end{PointSix}
-\end{frame}
-
-
-\begin{frame}{Current flow through the sub-surface}
-  \begin{PointSix}{Primary parameter of the resistivity method}
-   % RESISTOR with battery and arrow
-   \begin{center}
-    \begin{tikzpicture}
-
-      \draw [thick] (0,0.0) -- (8,0.0);
-      % drawing the node with shape=rectangle and anchor=center
-      %\node [draw, Karminrot, thick, shape=rectangle, minimum width=0.25cm, minimum height=0.25cm, anchor=center] at (B) {};
-      \draw [->, line width = 1mm] (4,0.5) -- (4,-0.5) node[xshift=1.0cm,yshift=1.0cm,midway,left] {current $\vec{I}$};
-      \draw [->, line width = 1mm] (6,0.5) -- (4,-0.5) node[xshift=1.0cm,yshift=1.0cm,midway,left] {current $\vec{I}$};
-      \node[yshift=0.3cm] at (A) {\small Surface};
-  
-    \end{tikzpicture}
-    % $$
-    %   \boxed{\vec{j} = \sigma \vec{E}}
-    % $$
-    % \small
-    % $\vec{E}$ is the electrical field ($V m^{-1}$ )\\
-    % $\vec{j}$ is the current density ($A m^{-2}$) \\
-    % \vspace{1cm}
-    % \alert{Currents flow parallel to the electrical field.}
-  \end{center}
-  \end{PointSix}
-\end{frame}
