@@ -1,0 +1,67 @@
+\subsection{Induced Polarization}
+(a) Explain explicitly why an oscillating input current can be described with 
+$$
+V(t) = U_0e^{j(\omega t+\phi_0)}
+$$ 
+where $j=\sqrt{-1}$ is the imaginary number. Assign the terms "Amplitude", "Phase Offset", and "Frequency" to the variables involved and memorize that those three parameters are always required to describe any type of waves and oscillations. Sketch the real part of V(t).
+
+(b) Why does multiplication with "j" correspond to a phase shift of 90 degrees (or $\pi/2$)? 
+
+(c) Explain why the $I-V_c$ relationship for a capacitor is given by:
+$$
+I = C\frac{dV_c}{dt}
+$$
+and calculate the ratio (or the impedance) of $\frac{I}{U}$ for an ac potential V(t). 
+
+(d) Explain in a few words as to why this can be understood as the resistance of a capacitor in an AC circuit. How does the impedance change with lower and higher frequencies? 
+
+Induced Polarization surveys can also be done in the frequency-domain. Instead of measuring the chargeability (defined in class) the frequency effect of the apparant resistitivy is obtained:
+
+$$
+FE = \frac{\rho_{a,dc}}{\rho_{a,ac}} - 1
+$$
+In practice this is done by measuring the dc-resistivity at very low frequencies and the ac-resistivity at intermediate frequencies. 
+
+(e) Why are in an induced polarization survey the induced current and measured voltage out of phase? Is this also the case if the sub-surface as no polarization characteristics?
+
+
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    (a)
+    $$
+    V(t) = U_0e^{j()\omega t+\phi_0)} = U_0 (\cos(\omega t+\phi_0)+i\sin(\omega t+\phi_0)
+    $$
+    The real part of this equation corresponds to a \textit{normal} $\cos$ with amplitude $U_0$, angular frequency $\omega$ and phase offset $\phi_0$. (Drawing)
+
+    (b)
+    \begin{eqnarray}
+    V(t) = U_0e^{j()\omega t+\phi_0+\pi/2)}  \\
+    = U_0e^{j(\omega t+\phi_0)}e^{j\pi/2} \\
+    = U_0e^{j(\omega t+\phi_0)}(cos(\pi/2)+i\sin(\pi/2)) \\
+    =i U_0e^{j(\omega t+\phi_0)}
+    \end{eqnarray}
+  
+
+    (c)
+    From lecture we know that $V_c = \frac{q}{C}$:
+    $$
+    \frac{dV_c}{dt} = \frac{1}{c}\frac{ds}{dt} = \frac{1}{c}I
+    $$
+    Hence:
+    $$
+    \frac{dV_c}{dt} = \frac{d}{dt}V_0e^{j\omega t}=j\omega V_c(t)
+    $$
+    and:
+    $$
+    \frac{V_c}{I} = \frac{1}{j\omega C} = -\frac{j}{\omega C}
+    $$
+    (d)
+    This is an extension to Ohm's law in the ac case. At low frequencies the impedance is large, and at high frequencies the impedance is high. 
+    
+    (e) The multiplication with "-j" indicates that current leads the voltage by 90 degrees if the subsurface is polarized. This phase shift can also be analyzed and will be important for other geophysical methods as well. If there is no polarization in the sub-surface that we "only" have resistive properties in which (according to Ohm's law) the potential difference and currents are always in-phase with each other.
+
+\end{tcolorbox}
+\fi
+

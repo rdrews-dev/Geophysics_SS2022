@@ -1,0 +1,19 @@
+\subsection{Geoelectric Depth Of Investigation 2}
+In a previous exercises we have shown that the horizontal component of the two current density in the center between the current electrodes is given by:
+$$
+ J_x(x=L/2) = \frac{I}{2\pi}\frac{L}{(z^2+y^2+L^2/4)^{3/2}}
+$$
+We now want to calculate the cumulative signal contribution from a given depth interval between $z_1$ and $z_2$. This will give as an estimate for the depth of investigation as a function of the electrode spacing. The cumulative signal contribution can be calculated via integrating:
+$$
+    \frac{I_x}{I} = \frac{L}{2\pi}\int_{z_1}^{z+2}dx \int_{-\infty}^{\infty}dy\frac{1}{(z^2+y^2+L^2/4)^{3/2}}
+$$
+Note that like this we calculate the ratio of current $I_X$ (not current density) in that depth interval relative to the overall injected current $I$. Show that for $z_2\ri
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    %\lstinputlisting[language=python]{../../Src/Resistivity/RD_VES_ForwardModel_Ex6Solution.ipynb}
+    \includegraphics*[width=0.8\linewidth]{Figures/Resistivity/ArrrayTypes_Loke.png}
+    \includegraphics*[width=0.8\linewidth]{Figures/Resistivity/ArrrayProperties_Reynolds.png}
+    \end{tcolorbox}
+\fi

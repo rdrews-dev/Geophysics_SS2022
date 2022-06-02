@@ -1,0 +1,18 @@
+\subsection{The LaPlace Equation}
+(\textit{easy}) In the lecture we derived that the potential field of a single electrode (second electrode is located at infinity) satisfies the LaPlace equation:
+$$
+\vec \nabla^2 V = \Delta V = 0.
+$$
+Show that our \textit{Ansatz} $V(r) = \frac{A}{r}$ satisfies this equation in spherical coordinates. Note that the LaPlace in spherical coordinates is $\nabla^2 = \frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial }{\partial r}\right)$.
+
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    \begin{eqnarray*}
+    \nabla^2 &=& \frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial }{\partial r}\frac{A}{r}\right)   \\
+    &=& \frac{1}{r^2}\frac{\partial }{\partial r}\left(-r^2 \frac{A}{r^2}\right) \\
+    &=& \frac{1}{r^2}\frac{\partial }{\partial r} A = 0
+    \end{eqnarray*}
+    \end{tcolorbox}
+\fi
