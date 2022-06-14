@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt,fleqn]{article}
+%All Layout Packages are defined in the Header.tex
+\include{Header}
+\usepackage{amsmath}
+\usepackage{booktabs,array,tabularx}
+\usepackage{esvect}
+
+\begin{document}
+
+
+
+ \section{Maxwell Equation and Electromagnetic Induction}
+ \textbf{Version:} \today 
+
+ \textbf{Motivation:} Ten most important equations that changed the world. Among those:
+
+\begin{eqnarray*}
+  &a^2+b^2 = c^2 & \text{(Pythagoras)}\\
+  &e^{i\pi}+1=0 \quad &\text{(Euler)}\\
+  &\vec{F} = m\vec{a}; \vec{F} = G\frac{mM}{r^2} & \text{(Newton)} \\
+  &(... \text{Einstein, Schrödinger})
+ \end{eqnarray*}
+ 
+ and Maxwell:
+
+ \begin{eqnarray*}
+  \nabla \cdot \vec{\mathbf{D}}  &=& \rho \qquad  \text{(Gauss)}\\
+  \nabla \cdot \vec{\mathbf{B}}  &=& 0 \qquad  \text{(Gauss)} \\
+  \nabla \times \vec{\mathbf{E}} &=& -\frac{\partial \vec{\mathbf{B}}} {\partial t} \qquad \text{(Faraday)}\\
+  \nabla \times \vec{\mathbf{H}} &=& \vec{\mathbf{J}} + \frac{\partial \vec{\mathbf{D}}} {\partial t} \qquad \text{(Amp\'{e}re-Maxwell)}\\
+  \vec{\mathbf{D}} &=& \varepsilon \varepsilon_0\vec{\mathbf{E}} \qquad  \text{(materials: electric field, dielectric field)} \\
+  \vec{\mathbf{H}} &=& \mu \mu_0\vec{\mathbf{B}}  \qquad \text{(materials: magnetizing field, magnetic induction)} \\
+  \vec{j} &=& \sigma \vec{\mathbf{E}}  \qquad \text{(Ohm's law)} \\
+ \end{eqnarray*}
+
+ and Integral:
+
+ \begin{eqnarray*}
+  \int \int_{\partial \Omega} \vec{\mathbf{D}}\cdot d\vec{\mathbf{S}} &=& \int\int\int_{\Omega}\rho \qquad  \text{(Gauss)}\\
+  \int \int_{\partial \Omega} \vec{\mathbf{B}}\cdot d\vec{\mathbf{S}} &=& 0 \qquad  \text{(Gauss)} \\
+  \int_{\partial \Sigma} \vec{\mathbf{E}}\cdot d\vec{\mathbf{l}} &=& -\frac{\partial} {\partial t} \int\int_{\Sigma}\vec{\mathbf{B}}\cdot{d\vec{S}}\qquad \text{(Faraday)}\\
+  \int_{\partial \Sigma} \vec{\mathbf{H}} \cdot d\vec{\mathbf{l}} &=& \int\int_{\Sigma} \vec{\mathbf{J}}\cdot d\vec{\mathbf{S}} + \frac{\partial} {\partial t} \int\int_{\Sigma}\vec{\mathbf{D}}\cdot d\vec{\mathbf{S}} \qquad \text{(Amp\'{e}re-Maxwell)}\\
+  \Omega: \text{Volume} \\
+  \Sigma: \text{Surface} \\
+  \partial \Omega: \text{Surface of volume} \\
+  \partial \Sigma: \text{Edge of surface} \\
+ \end{eqnarray*}
+ 
+Have a picture in mind for each one of them:
+(1) Source of a static E-field.
+(2) Dipole b-Field.
+(3) Induction with Magnet.
+(4) Displacement Currents and Bio-Savart law
+
+Integral vs. Differential form: EMF, loops, LENZ law\\
+
+Principle of self-induction\\
+
+Table resistance frequency dependency \\
+
+$Z_L = j \omega L$  V lags I
+$Z_c = \frac{1}{i \omega C}$ I lags V
+$Z_R = R$ in phase \\
+
+Classification of electrical methods \\
+
+
+Principles of the Slingram Method\\
+
+$I_{l1} = I_1 e^{i\omega t}$
+
+
+$V_{l3} = L_{13}\frac{d I_{l1}}{dt} = i\omega L_{13}I_1e^{i\omega t}$
+$V_{l2} = L_{12}\frac{d I_{l1}}{dt} = i\omega L_{12}I_1e^{i\omega t}$
+
+What is $I_2$ with a R-L Subsurface model? Ohms law:
+
+$Z_{l2} = R + i\omega L_{l2}$
+$V_{l2} = (R + i\omega L_{l2})I_2$
+
+Induced voltage is balanced by inductance and resistance:
+
+$i \omega L_{12} I_1 e^{i\omega t} + (R + i\omega L_{l2})I_2 = 0$\\
+$I_{l2} = I_2e^{i\omega } = \frac{-i\omega L_{12}}{R_{l2}+i\omega L_{l2}}I_1e^{i\omega t}$
+$I_{l2} = I_2e^{i\omega t} = \frac{-i\omega \frac{L_{l2}}{R_{l2}}}{1+i\omega \frac{L_{l2}}{R_{l2}}}\frac{L_{12}}{L_{l2}}I_1e^{i\omega t}$\\
+
+Il2 will produce a secondary B. How does that appear in Loop 3:
+
+$V_{l3} = L_{13}\frac{dI_l1}{dt}$ primary
+$V_{l3} = L_{23}\frac{dI_l2}{dt}$ secondary
+
+$\frac{U_s}{U_p}= -\frac{L_{12}L_{23}}{L_{13}L_{l2}}\left(\frac{i\omega \frac{L_{l2}}{R_{l2}}}{1+i\omega\frac{L_{l2}}{R_{l2}}}\right)$
+
+induction number:
+$
+\alpha = \omega \frac{L_{l2}}{R_{l2}}
+$
+helps to write the complex number in standard form:
+$\frac{U_s}{U_p}== -\frac{L_{12}L_{23}}{L_{13}L_{l2}} \left(\frac{1}{1+\alpha^2}(\alpha^2+i\alpha) \right)$
+
+
+
+
+\end{document}
+
+
+
+
