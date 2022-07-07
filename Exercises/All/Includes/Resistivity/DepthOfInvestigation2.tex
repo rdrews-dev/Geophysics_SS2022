@@ -1,19 +1,50 @@
 \subsection{Geoelectric Depth Of Investigation 2}
-In a previous exercises we have shown that the horizontal component of the two current density in the center between the current electrodes is given by:
+(tricky) In a previous exercises we have shown that the horizontal component of the two current density in the center between the current electrodes is given by:
 $$
  J_x(x=L/2) = \frac{I}{2\pi}\frac{L}{(z^2+y^2+L^2/4)^{3/2}}
 $$
 We now want to calculate the cumulative signal contribution from a given depth interval between $z_1$ and $z_2$. This will give as an estimate for the depth of investigation as a function of the electrode spacing. The cumulative signal contribution can be calculated via integrating:
 $$
-    \frac{I_x}{I} = \frac{L}{2\pi}\int_{z_1}^{z+2}dx \int_{-\infty}^{\infty}dy\frac{1}{(z^2+y^2+L^2/4)^{3/2}}
+    \frac{I_x}{I} = \frac{L}{2\pi}\int_{z_1}^{z_2}dz \int_{-\infty}^{\infty}dy\frac{1}{(z^2+y^2+L^2/4)^{3/2}}
 $$
-Note that like this we calculate the ratio of current $I_X$ (not current density) in that depth interval relative to the overall injected current $I$. Show that for $z_2\ri
+Note that like this we calculate the ratio of current $I_X$ (not current density) in that depth interval relative to the overall injected current $I$. Show that for $z_2\rightarrow \infty$:
+$$
+\frac{I_x}{I} = 1 - \frac{2}{\pi}\tan^{-1}(\frac{2z_1}{L})
+$$
+What does this mean, e.g., for $z_1=0$ or $z_1 = L/2$ ? \\
+\\
+Hint 1: 
+$$\int \frac{1}{(c+z^2)^{3/2}} = \frac{z}{c\sqrt{c+z^2}}$$
+
+
+Hint 2: 
+
+$$\int \frac{1}{a^2+z^2} = \frac{1}{a}\tan^{-1}(\frac{z}{a})$$
 \ifanswers
     \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
     colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
     watermark color=white]
-    %\lstinputlisting[language=python]{../../Src/Resistivity/RD_VES_ForwardModel_Ex6Solution.ipynb}
-    \includegraphics*[width=0.8\linewidth]{Figures/Resistivity/ArrrayTypes_Loke.png}
-    \includegraphics*[width=0.8\linewidth]{Figures/Resistivity/ArrrayProperties_Reynolds.png}
+    First the y-integration we we set $c = z^2 + L^2/4$ and use hint 1 then 
+    \begin{eqnarray*}
+    \int_{-\infty}^{\infty}dy\frac{1}{(z^2+y^2+L^2/4)^{3/2}} = \\
+    \left[  \frac{y}{(z^2 + L^2/4)\sqrt{z^2 + L^2/4 + y^2}}  \right]_{-\infty}^{\infty}  = \\
+    \frac{1}{(z^2 + L^2/4)}\left[  \frac{y}{\sqrt{z^2 + L^2/4 + y^2}}  \right]_{-\infty}^{\infty}=\\
+    \frac{1}{(z^2 + L^2/4)}\left[  \frac{y}{|y|\sqrt{z^2/y^2 + L^2/4/y^2 + 1}}  \right]_{-\infty}^{\infty}=\frac{2}{(z^2 + L^2/4)}\\
+    \end{eqnarray*}
+    Next the z-integration and using a = L/2:
+    \begin{eqnarray*}
+        \int_{z_1}^{z_2}dz \frac{2}{(z^2 + L^2/4)} = \\
+        \frac{4}{L}\left[\tan^{-1}(2z/L) \right]_{z_1}^{z_2}
+    \end{eqnarray*}
+    Taken together this results in:
+    $$
+    \frac{I_x}{I} = \frac{2}{\pi}\tan^{-1}(\frac{2z_2}{L}) - \frac{2}{\pi}\tan^{-1}(\frac{2z_1}{L})
+    $$
+    For $z_2\rightarrow \infty$:
+    $$
+    \frac{I_x}{I} = 1 - \frac{2}{\pi}\tan^{-1}(\frac{2z_1}{L})
+    $$
+    For $z_1$ = 0 $\frac{I_x}{I} = 1$ which is logicial as it means all of the current flows through the interface at some stage as we integrate over the entire depth. For $z_1 = L/2 $ half the currents flows above $z_1$ and half the current flows below $z_1$ as $\frac{I_x}{I} = 0.5$. This gives as good estimate for the depth of investigation as a function of the electrode spacing. However, keep in mind that the larger $L$ the small the current and potential differences involved, and at some stage you will not be able to detect this anymore. 
     \end{tcolorbox}
 \fi
+

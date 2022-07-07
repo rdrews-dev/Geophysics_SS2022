@@ -1,0 +1,53 @@
+\subsection{Details of the Skin Effect}
+\textit{Same as in 7.1 (a) is fairly technical. It is helfpul for (b).}\\
+
+\textbf{(a)} Show that
+$$
+m^2 = i\alpha \rightarrow m=-(1+i)\sqrt{\frac{\alpha}{2}}
+$$
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    One way is to square the right hand side of the equation:
+    $$\left(-(1+i)\sqrt{\frac{\alpha}{2}}\right)^2 = (1-2i+i^2)\frac{\alpha}{2} = -i\alpha$$
+    The more formal way suppose that so that with m = a +ib:
+    \begin{eqnarray*}
+    m^2 &=& a^2+2iab+(ib)^2 \\
+    &=& a^2 - b^2+2iab = i\alpha
+    \end{eqnarray*}
+    This equation holds if $a^2 = b^2$ (meaning that $a=\pm b$) and
+    $$2ia^2 = i\alpha \rightarrow a=\sqrt{\frac{a}{2}}=\pm b$$
+    so that
+    $$m=(\sqrt{\frac{a}{2}}+i\sqrt{\frac{a}{2}}) = \pm(1+i)\sqrt{\frac{a}{2}}$$
+    
+\end{tcolorbox}
+\fi
+\textbf{(b)} Show that
+$$
+Re(E) = E_0e^{-kz}\cos(\omega t - kz)
+$$
+is the real part of a solution satisfying
+$$
+\frac{\partial^2}{\partial z^2}E = i\omega \mu \sigma E
+$$
+with the Ansatz: $E = E_0e^{i\omega t+mz}$. What type of differential equation is this? What process does it describe?
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    \textbf{Solution:} Pluggin the Ansatz into the differential equation yields:
+    \begin{eqnarray*}
+    m^2E_0e^{i\omega t + mz} &=& i\omega \mu \sigma E_0 e^{i\omega t + mz} \\
+    m^2 &=& i\omega \mu \sigma \\
+    m &=& -(1+i)\sqrt{\frac{\omega \mu \sigma}{2}}
+    \end{eqnarray*}
+    This means that
+    \begin{eqnarray*}
+    E &=& E_0e^{i\omega t -(1+i)\sqrt{\frac{\omega \mu \sigma}{2}}z} \\
+    E &=&E_0\underbrace{e^{-\sqrt{\frac{\omega \mu \sigma}{2}}z}}_{damping}\underbrace{e^{i(\omega t - \sqrt{\frac{\omega \mu \sigma}{2}}z)}}_{oscillation}
+    \end{eqnarray*}
+    which describes a damped harmonic oscillation. The damping factor $\sqrt{\frac{\omega \mu \sigma}{2}}$ can be linked to the skin depth (cf. lecture).
+    
+\end{tcolorbox}
+\fi

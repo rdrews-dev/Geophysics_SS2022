@@ -98,9 +98,104 @@ $
 helps to write the complex number in standard form:
 $\frac{U_s}{U_p}== -\frac{L_{12}L_{23}}{L_{13}L_{l2}} \left(\frac{1}{1+\alpha^2}(\alpha^2+i\alpha) \right)$
 
+\section{Seismics}
+$$
+\frac{\partial^2 \Psi}{\partial t^2 \Psi} = v^2 \frac{\partial^2 \Psi}{\partial x^2 \Psi}
+$$
+\begin{itemize}
+  \item This is an (undamped) wave equation.
+  \item This is a second order (hyperbolic) partial differential equation.
+  \item It is a function of space $x$ and time $t$.
+\end{itemize}
+\subsection{General solution}
+$$\Psi = f(x+vt) + f(x-vt)$$
+Exampel: $\Psi(x,t) = e^{k(x-vt)}, \sin(x-vt), (x-vt)^3$.
+
+However, only one solution complies with the given initial and boundary conditions. What is $v$?
+\\
+Draw Picture 4.4 Telford of $\Psi$  of wave form $\Psi$ on y-axis with an $x_0$ and $t_0+\Delta t$ marked. 
+\\
+$$t_0+\Delta t: \Psi_1(x_0+\Delta_x,t+t_0) = f(x_0+\Delta_x-v(t_0+\Delta t))$$
+$$t_0: \Psi_1(x_0,t) = f(x_0+\Delta_x-vt_0)$$
+$$
+x_0 - vt_0 = x_0 + \Delta x -v(t_0+\Delta t)
+$$
+\begin{itemize}
+\item $x \pm vt$ is the phase
+\item $x \pm vt = const.$  wavefronts
+\item normal to the wavefront is the raypath
+\end{itemize}
+
+\subsection{Specific solutions}
+\subsubsection{Spherical waves}
+$$
+\frac{\partial^2 \Psi}{\partial t^2 \Psi} = \frac{v^2}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\Psi}{\partial r}\right)
+$$
+Solution:
+$$
+\psi(x,t) = \frac{1}{r}f(r-vt)
+$$
+Spherical waves the circles are wavefronts (i.e. lines of constant phase). Raypath are thus along $r$. In the farfield spherical waves can be approximated with plane waves.
+
+\textit{draw Figure 4.6 plane waves and spherical waves}
+\subsubsection{Harmonic waves}
+\begin{eqnarray}
+\psi(x,t) = A\cos(k(x-vt))\\
+\psi(x,t) = A/r \cos(k(x-vt))
+\end{eqnarray}
+
+At fixed t if x increases by 2$\pi$/k then everything repeats so 
+$$
+\lambda = \frac{2\pi}{k} \text{wavelength}
+$$ 
+At fixed x it varies harmonically with time from -A to A (or -A/r to A/r). A is the amplitude.
+
+At fixed x repetition by T if  $kVT=2\pi = 2\pi(vT/\lambda)$
+
+\begin{eqnarray}
+  T = \lambda/v \\
+  f = 1/T \\
+  v = \lambda f
+\end{eqnarray}
+With T period, f frequency, v phase velocity. Commonly used is the angular frequency $\omega = 2\pi f$ so that
+
+\begin{eqnarray}
+  \Psi(x,t) = A\cos(k(x-vt)) = A\cos(kx-\omega t) \\
+\end{eqnarray}
+
+Sometimes and additional phase offset is used:
+\begin{eqnarray}
+  \Psi(x,t) = A\cos(k(x-vt)) = A\cos(kx-\omega t+\varepsilon) \\
+\end{eqnarray}
 
 
+\subsection{Some critical steps in dipped layer refraction seismics}
+Goal: write $t^-$ as a function of velocities and dip. Isolate slope and simplfy y-offset.
+$t^- = \frac{d^-}{v_1\cos(i_c)} + \frac{d^+}{v_1\cos(i_c)} + \frac{x\cos(\theta)-(d^-+d^+)\tan(i_c)}{v_2}$
 
+\begin{eqnarray*}
+  t^- = \frac{d^-}{v_1\cos(i_c)} + \frac{d^+}{v_1\cos(i_c)} + \frac{x\cos(\theta)-(d^-+d^+)\tan(i_c)}{v_2} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{d^-}{v_1\cos(i_c)}  + \frac{d^+}{v_1\cos(i_c)} - \frac{(d^-+d^+)\tan(i_c)}{v_2} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{d^-}{v_1\cos(i_c)}  + \frac{d^+}{v_1\cos(i_c)} - \frac{(d^-+d^+)\sin(i_c)}{\cos(i_c)v_2} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{d^-}{v_1\cos(i_c)}  + \frac{d^+}{v_1\cos(i_c)} - \frac{(d^-+d^+)v_1}{\cos(i_c)v_2^2} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{d^-}{v_1\cos(i_c)}  + \frac{d^+}{v_1\cos(i_c)} - \frac{(d^-+d^+)v_1^2}{v_1\cos(i_c)v_2^2} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{1}{v_1\cos(\i_c)} (d^-+d^+-(d^-+d^+)\frac{v_1^2}{v_2^2}) \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{1}{v_1\cos(\i_c)} ((d^-+d^+)(1-\frac{v_1^2}{v_2^2})) \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{(d^-+d^+)\cos(\i_c)}{v_1}\\
+\end{eqnarray*}
+eliminate $d^+$ using use: $d^+ = d^- + x\sin(\theta)$ which is clear from geometry when you put $\theta$ at the surface.
+\begin{eqnarray*}
+  t^- = \frac{x\cos(\theta)}{v_2} + \frac{(d^-+d^+)\cos(i_c)}{v_1} \\
+  = \frac{x\cos(\theta)}{v_2} + \frac{(2d^-+x\sin(\theta))\cos(i_c)}{v_1}\\
+  = \frac{x\cos(\theta)}{v_2} + \frac{2d^-\cos(\i_c)}{v_1} +\frac{x\sin(\theta)\cos(i_c)}{v_1}\\
+  = \frac{x\cos(\theta)\sin(i_c)}{v_2\sin(i_c)} + \frac{2d^-\cos(\i_c)}{v_1} +\frac{x\sin(\theta)\cos(i_c)}{v_1}\\
+  = \frac{x\cos(\theta)\sin(i_c)}{v_1} + \frac{2d^-\cos(\i_c)}{v_1} +\frac{x\sin(\theta)\cos(i_c)}{v_1}\\
+  = \frac{x\sin(\theta+i_c)}{v_1} + \frac{2d^-\cos(i_c)}{v_1}\\
+\end{eqnarray*}
+$\theta$ and $i_c$ are yet unknown but can be derived from the arcsin relation straightforward.
+$$
+\frac{1}{v_2^-}+\frac{1}{v_2^+} = \frac{1}{v_1}\sin(i_c)\cos(\theta) = \frac{2}{v_2}\cos(\theta)
+$$
 \end{document}
 
 

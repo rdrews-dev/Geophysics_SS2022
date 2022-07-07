@@ -1,0 +1,58 @@
+\subsection{Reflection seismics}
+You get a desperate Email from an all friend of yours:\\
+
+\textit{My dearest friend,}\\
+
+\textit{I just got hired in a geophysical prospecting company and earn good money. Unfortunately, I never took a geophysics lecture and I can't handle math at all (which sort of makes me wonder why they hired me in the first place.) My supervisor handed me some data (cf. Figs. 1\& 2) of a test seismic survey. They only did one explosion and wanted to estimate in this shot gather what the subsurface looks like, before collecting more data.  I am supposed to give a presentation next week answering the following questions:}
+\textit{
+\begin{itemize}
+    \item Which seismic wave types are visible in the shot gather?
+    \item What are the seismic velocities and over which depth intervals do they change?
+    \item Does the survey confirm our expectations (from the geologic context) that we have two stratigraphic units at this location which are horizontal?
+    \item What are the interval velocities of the individual layers? (some new content)
+    \item Can we explain all signatures in the shot gather? (some new content)
+\end{itemize}
+}
+\textit{My supervisor suggested that I start with the analysis of linear features and then move on to the shallowest and deepest reflection hyperbolas. Apparantly the root-mean-square velocity $v_{RMS}$ and the respective interval velocities $v_i$ at layers $i$ traversed by time $\Delta t_i$ are connected like that:}
+$$
+v_{RMS} = \sqrt{\frac{\sum_i v_i^2 \Delta t_i}{\sum_i \Delta t_i}}
+$$
+
+\textit{To be honest, I don't even know what she is talking about. Could you please help me out and send me some drawings + calculations that I can use in the presentation? This will not be forgotton. I wish I had taken more rigorous lectures during my studies.} \\
+
+\textit{Regards, Your Friend}
+
+
+\pagebreak
+\begin{figure}
+\includegraphics*[width=\linewidth]{Figures/Seismics/ShotGather_smallgain.pdf}
+\caption{Shot gather for shot at postion 0, geophonespacing is 20 m.}
+\end{figure}
+
+\pagebreak
+\begin{figure}
+\includegraphics*[width=\linewidth]{Figures/Seismics/ShotGather_largergain.pdf}
+\caption{Shot gather for shot at postion 0, geophonespacing is 20 m. Compared to Fig.1 the amplitudes are scaled so that weaker signals are more apparant.}
+\end{figure}
+test.
+\pagebreak 
+\ifanswers
+    \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
+    colback=blue!5!white,colframe=babyblueeyes,title=Solutions,
+    watermark color=white]
+    
+        \begin{center}
+        \includegraphics*[width=0.8\linewidth]{Figures/Seismics/ShotGather_solutions.pdf}
+        \end{center}
+    Linear features show direct wave travelling with $v_1 = 700 $ ms$^{-1}$ (magenta lines). Knickpoint at around 400 m profile distance. Then arrivals of headwave with $v_2 = 1000 $ ms$^{-1}$. Hyperbolic reflection hyperbola (green lines) with $t_0 = 0.228$ s. Analysis of velocities using $t^2-x^2$ method or normal moveout is straightforward (see Matlab code). Lowest hyperbola can be done in the same way. Middle hyperbola (red lines) is a multiple from the first reflection interface with a traveltime: 
+    $$
+      t_{multiple} = \frac{4}{v_1}\sqrt{d_1^2+\frac{x}{4}^2}  
+    $$
+    which can be derived from the geometry knowing that the reflection point of the multiple is at x/4 and not x/2 as is the case for the primary reflection. The interval velocities of the lower layer can be derived by inverting the Dix-Dürrbaum equation provided in the letter.
+    \begin{center}
+        \includegraphics*[width=0.5\linewidth]{Figures/Seismics/TsqXsq.pdf}
+        \end{center}
+        \lstinputlisting[language=matlab]{../../Src/Seismics/RD_Functions/RD_ShotRecordHorizontalLayering.m}
+\end{tcolorbox}
+\fi
+
